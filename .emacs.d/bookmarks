@@ -1,0 +1,155 @@
+;;;; Emacs Bookmark Format Version 1 ;;;; -*- coding: utf-8-emacs -*- 
+;;; This format is meant to be slightly human-readable;
+;;; nevertheless, you probably don't want to edit it.
+;;; -*- End Of Bookmark File Format Version Stamp -*-
+(("index.rst"
+ (filename . "~/math/index.rst")
+ (front-context-string . "\nIndices and tab")
+ (rear-context-string . "\n   mathjaxtest\n")
+ (position . 354))
+("karabiner"
+ (filename . "~/.config/karabiner/")
+ (front-context-string . "karabiner.json\n ")
+ (rear-context-string . "90 May 15 06:21 ")
+ (position . 135))
+("Math"
+ (filename . "~/Dropbox/Workspace/Math/")
+ (front-context-string . "  /Users/hbshim/")
+ (rear-context-string)
+ (position . 1))
+("Workspace"
+ (filename . "~/Dropbox/Workspace/")
+ (front-context-string . "  /Users/hbshim/")
+ (rear-context-string)
+ (position . 1))
+("Downloads"
+ (filename . "~/Dropbox/hbshim/Downloads/")
+ (front-context-string . "  /Users/hbshim/")
+ (rear-context-string)
+ (position . 1))
+("org.org"
+ (filename . "~/math/org.org")
+ (front-context-string . "#+TITLE: My Org ")
+ (rear-context-string)
+ (position . 1))
+("macos_programming.org"
+ (filename . "~/math/macos_programming.org")
+ (front-context-string . "* AppDelegate \n\n")
+ (rear-context-string)
+ (position . 1))
+("git.org"
+ (filename . "~/math/git.org")
+ (front-context-string . "* init\n\n#+BEGIN_")
+ (rear-context-string)
+ (position . 1))
+(".bash_profile"
+ (filename . "~/.bash_profile")
+ (front-context-string . "color_prompt=yes")
+ (rear-context-string)
+ (position . 1))
+("stock_tech_analysis.tex"
+ (filename . "~/math/stock_tech_analysis.tex")
+ (front-context-string . "\\documentclass{a")
+ (rear-context-string)
+ (position . 1))
+("set_theory.tex"
+ (filename . "~/Dropbox/Workspace/Math/set_theory.tex")
+ (front-context-string . "\\documentclass{a")
+ (rear-context-string)
+ (position . 1))
+("topology.tex"
+ (filename . "~/math/topology.tex")
+ (front-context-string . "\\documentclass{a")
+ (rear-context-string)
+ (position . 1))
+("series.tex"
+ (filename . "~/math/series.tex")
+ (front-context-string . "\\documentclass{a")
+ (rear-context-string)
+ (position . 1))
+("analysis.tex"
+ (filename . "~/math/analysis.tex")
+ (front-context-string . "\\documentclass{a")
+ (rear-context-string)
+ (position . 1))
+("category_theory.tex"
+ (filename . "~/math/category_theory.tex")
+ (front-context-string . "\\documentclass{a")
+ (rear-context-string)
+ (position . 1))
+("algebraic_geometry_schemes.tex"
+ (filename . "~/math/algebraic_geometry_schemes.tex")
+ (front-context-string . "\\documentclass{a")
+ (rear-context-string)
+ (position . 1))
+("homological_algebra.tex"
+ (filename . "~/math/homological_algebra.tex")
+ (front-context-string . "\\documentclass{a")
+ (rear-context-string)
+ (position . 1))
+("algebraic_geometry_varieties.tex"
+ (filename . "~/math/algebraic_geometry_varieties.tex")
+ (front-context-string . "\\documentclass{a")
+ (rear-context-string)
+ (position . 1))
+("foundation.tex"
+ (filename . "~/math/foundation.tex")
+ (front-context-string . "\\documentclass{a")
+ (rear-context-string)
+ (position . 1))
+("algebra.tex"
+ (filename . "~/math/algebra.tex")
+ (front-context-string . "\\documentclass{a")
+ (rear-context-string)
+ (position . 1))
+("macbookpro.org"
+ (filename . "~/math/macbookpro.org")
+ (front-context-string)
+ (rear-context-string)
+ (position . 1))
+("latex.org"
+ (filename . "~/math/latex.org")
+ (front-context-string)
+ (rear-context-string)
+ (position . 1))
+("neo4j.org"
+ (filename . "~/math/neo4j.org")
+ (front-context-string)
+ (rear-context-string)
+ (position . 1))
+("journal.org"
+ (filename . "~/org/journal.org")
+ (front-context-string . "* LaTeX\n- instal")
+ (rear-context-string)
+ (position . 1))
+(".ispell_english"
+ (filename . "~/.ispell_english")
+ (front-context-string . "abelian\nadjuncti")
+ (rear-context-string)
+ (position . 1))
+("abbrev_defs"
+ (filename . "~/.emacs.d/abbrev_defs")
+ (front-context-string . "(define-abbrev-t")
+ (rear-context-string . "rev-table '())\n\n")
+ (position . 2283))
+("ref.tex"
+ (filename . "~/math/ref.tex")
+ (front-context-string . "\n\\documentclass{")
+ (rear-context-string)
+ (position . 1))
+("algebraic_topology.tex"
+ (filename . "~/math/algebraic_topology.tex")
+ (front-context-string . "\\documentclass{a")
+ (rear-context-string)
+ (position . 1))
+(".emacs"
+ (filename . "~/.emacs")
+ (front-context-string . "(require 'packag")
+ (rear-context-string)
+ (position . 1))
+("emacs.org"
+ (filename . "~/math/emacs.org")
+ (front-context-string . "* Emacs\n** Abbre")
+ (rear-context-string)
+ (position . 1))
+)

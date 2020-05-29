@@ -1,0 +1,79 @@
+;; -*- mode: emacs-lisp; coding: emacs-mule; -*-
+;; --------------------------------------------------------------------------
+;; Desktop File for Emacs
+;; --------------------------------------------------------------------------
+;; Created Thu May 21 15:12:21 2020
+;; Desktop file format version 208
+;; Emacs version 26.3
+
+;; Global section:
+(setq desktop-saved-frameset [frameset 1 (24262 53909 422048 0) (desktop . "208") "hbshim@aleph.local" nil nil ((((minibuffer . t) (undecorated) (override-redirect) (font-backend mac-ct) (font . "-*-DejaVu Sans Mono-normal-normal-normal-*-13-*-*-*-m-0-iso10646-1") (border-width . 0) (internal-border-width . 0) (right-divider-width . 0) (bottom-divider-width . 0) (vertical-scroll-bars) (horizontal-scroll-bars) (foreground-color . "mac:textColor") (background-color . "mac:textBackgroundColor") (mouse-color . "mac:textColor") (border-color . "black") (screen-gamma) (line-spacing) (left-fringe . 8) (right-fringe . 8) (no-special-glyphs) (alpha) (scroll-bar-foreground) (scroll-bar-background) (tool-bar-lines . 0) (title) (inhibit-double-buffering) (menu-bar-lines . 1) (icon-type) (auto-raise) (auto-lower) (cursor-type . box) (scroll-bar-width . 0) (scroll-bar-height . 0) (no-focus-on-map) (no-accept-focus) (fullscreen) (visibility . t) (skip-taskbar) (z-group) (display-type . color) (background-mode . light) (cursor-color . "black") (frameset--id . "A53F-FA22-B360-0F31") (frameset--mini t) (modeline . t) (unsplittable) (icon-name) (display . "Mac") (explicit-name) (tool-bar-position . top) (height . 67) (width . 80) (left . 800) (top . 23)) ((min-height . 4) (min-width . 10) (min-height-ignore . 2) (min-width-ignore . 4) (min-height-safe . 1) (min-width-safe . 2) (min-pixel-height . 60) (min-pixel-width . 80) (min-pixel-height-ignore . 30) (min-pixel-width-ignore . 32) (min-pixel-height-safe . 15) (min-pixel-width-safe . 16)) leaf (pixel-width . 656) (pixel-height . 990) (total-width . 82) (total-height . 66) (normal-height . 1.0) (normal-width . 1.0) (buffer "Math" (selected) (hscroll . 0) (fringes 8 8 nil) (margins nil) (scroll-bars nil 0 t nil 0 t) (vscroll . 0) (dedicated) (point . 501) (start . 1))) (((minibuffer . t) (undecorated) (override-redirect) (font-backend mac-ct) (font . "-*-DejaVu Sans Mono-normal-normal-normal-*-13-*-*-*-m-0-iso10646-1") (border-width . 0) (internal-border-width . 0) (right-divider-width . 0) (bottom-divider-width . 0) (vertical-scroll-bars) (horizontal-scroll-bars) (foreground-color . "mac:textColor") (background-color . "mac:textBackgroundColor") (mouse-color . "mac:textColor") (border-color . "black") (screen-gamma) (line-spacing) (left-fringe . 8) (right-fringe . 8) (no-special-glyphs) (alpha) (scroll-bar-foreground) (scroll-bar-background) (tool-bar-lines . 0) (title) (inhibit-double-buffering) (menu-bar-lines . 1) (icon-type) (auto-raise) (auto-lower) (cursor-type . box) (scroll-bar-width . 0) (scroll-bar-height . 0) (no-focus-on-map) (no-accept-focus) (fullscreen) (visibility . t) (skip-taskbar) (z-group) (display-type . color) (background-mode . light) (cursor-color . "black") (environment) (frameset--id . "112E-96EB-166F-598B") (frameset--mini t . t) (modeline . t) (unsplittable) (icon-name) (display . "Mac") (explicit-name) (tool-bar-position . top) (height . 67) (width . 80) (left . 0) (top . 23)) ((min-height . 4) (min-width . 10) (min-height-ignore . 2) (min-width-ignore . 4) (min-height-safe . 1) (min-width-safe . 2) (min-pixel-height . 60) (min-pixel-width . 80) (min-pixel-height-ignore . 30) (min-pixel-width-ignore . 32) (min-pixel-height-safe . 15) (min-pixel-width-safe . 16)) leaf (pixel-width . 656) (pixel-height . 990) (total-width . 82) (total-height . 66) (normal-height . 1.0) (normal-width . 1.0) (buffer ".emacs" (selected . t) (hscroll . 0) (fringes 8 8 nil) (margins nil) (scroll-bars nil 0 t nil 0 t) (vscroll . 0) (dedicated) (point . 31821) (start . 30791))))])
+(setq desktop-missing-file-warning nil)
+(setq tags-file-name nil)
+(setq tags-table-list nil)
+(setq search-ring '("save"))
+(setq regexp-search-ring nil)
+(setq register-alist nil)
+(setq file-name-history nil)
+
+;; Buffer section -- buffers listed in same order as in buffer list:
+(desktop-create-buffer 208
+  "/Users/hbshim/.emacs"
+  ".emacs"
+  'emacs-lisp-mode
+  '(eldoc-mode helm-mode TeX-PDF-mode)
+  31821
+  '(40325 nil)
+  nil
+  nil
+  '((buffer-display-time 24262 53902 977780 0) (buffer-file-coding-system . utf-8-unix))
+  '((mark-ring (40091 40016 39566 1 40471 40398))))
+
+(desktop-create-buffer 208
+  "/Users/hbshim/math/algebra.tex"
+  "algebra.tex"
+  'latex-mode
+  '(abbrev-mode visual-line-mode helm-mode TeX-PDF-mode reftex-mode flyspell-mode)
+  1207016
+  '(1 nil)
+  nil
+  nil
+  '((indent-tabs-mode) (buffer-display-time 24262 53867 486872 0) (buffer-file-coding-system . utf-8-unix) (truncate-lines) (TeX-master . t))
+  '((mark-ring (1208674))))
+
+(desktop-create-buffer 208
+  "/Users/hbshim/Dropbox/Workspace/Math/homological_algebra.tex"
+  "homological_algebra.tex"
+  'latex-mode
+  '(abbrev-mode visual-line-mode helm-mode TeX-PDF-mode reftex-mode flyspell-mode)
+  264980
+  '(17193 nil)
+  nil
+  nil
+  '((indent-tabs-mode) (buffer-display-time 24262 53850 698812 0) (buffer-file-coding-system . undecided-unix) (truncate-lines) (TeX-master . t))
+  '((mark-ring (262945 1))))
+
+(desktop-create-buffer 208
+  nil
+  "Math"
+  'dired-mode
+  '(helm-mode dired-omit-mode auto-revert-mode TeX-PDF-mode)
+  501
+  '(nil nil)
+  t
+  '("/Users/hbshim/Dropbox/Workspace/Math/")
+  '((buffer-display-time 24262 53633 956316 0) (truncate-lines . t))
+  '((mark-ring nil)))
+
+(desktop-create-buffer 208
+  "/Users/hbshim/math/_region_.tex"
+  "_region_.tex"
+  'fundamental-mode
+  '(helm-mode TeX-PDF-mode)
+  1208960
+  '(nil nil)
+  t
+  nil
+  '((buffer-display-time 24262 53614 545306 0) (buffer-file-coding-system . utf-8-unix) (TeX-master . t))
+  '((mark-ring nil)))
+

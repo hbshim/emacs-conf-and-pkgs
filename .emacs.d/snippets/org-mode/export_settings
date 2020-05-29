@@ -1,0 +1,11 @@
+# -*- mode: snippet -*-
+# name: export settings
+# key: #+TITLE
+# --
+#+TITLE: $1
+#+AUTHOR: `user-full-name`
+#+DATE: `(current-time-string)`
+#+EMAIL: `user-mail-address`
+#+LANGUAGE: en
+
+$0

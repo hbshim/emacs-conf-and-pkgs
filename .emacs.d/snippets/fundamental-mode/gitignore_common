@@ -1,0 +1,6 @@
+# -*- mode: snippet -*-
+# name: gitignore common files
+# key: gitignore
+# --
+.DS_Store
+*~

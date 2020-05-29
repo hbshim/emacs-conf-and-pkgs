@@ -12,3 +12,5 @@ $ ln -s <PATH>/.emacs.d ~/.emacs.d
 These commands create the following symlinks in the home directory (~)
 .emacs    ->  <PATH>/.emacs
 .emacs.d  ->  <PATH>/.emacs.d
+
+After this, it would be better to byte compile all of the .el files.

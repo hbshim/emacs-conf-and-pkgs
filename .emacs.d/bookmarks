@@ -2,7 +2,12 @@
 ;;; This format is meant to be slightly human-readable;
 ;;; nevertheless, you probably don't want to edit it.
 ;;; -*- End Of Bookmark File Format Version Stamp -*-
-(("index.rst"
+(("github.io sphinx conf.py"
+ (filename . "~/math/conf.py")
+ (front-context-string . "# -*- coding: ut")
+ (rear-context-string)
+ (position . 1))
+("github.io sphinx index.rst"
  (filename . "~/math/index.rst")
  (front-context-string . "\nIndices and tab")
  (rear-context-string . "\n   mathjaxtest\n")

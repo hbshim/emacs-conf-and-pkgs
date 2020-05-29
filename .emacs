@@ -235,7 +235,7 @@
    (quote
     (ox-rst yasnippet helm-dired-history magithub htmlize proof-general latex-math-preview auto-complete helm-bibtex helm-fuzzier helm-flx exec-path-from-shell auctex helm)))
  '(pdf-view-midnight-colors (quote ("#232333" . "#c7c7c7")))
- '(preview-TeX-style-dir "~/.emacs.d/elpa/auctex-12.1.2/latex")
+ '(preview-TeX-style-dir "~/.emacs.d/elpa/auctex-12.1.2/latex" t)
  '(preview-auto-cache-preamble t)
  '(preview-auto-reveal nil)
  '(preview-default-option-list
@@ -278,7 +278,11 @@
  '(reftex-section-prefixes (quote ((0 . "") (1 . "") (t . ""))))
  '(safe-local-variable-values
    (quote
-    ((eval let
+    ((eval add-hook
+           (quote after-save-hook)
+           (quote org-rst-export-to-rst)
+           t t)
+     (eval let
            ((default-directory
               (locate-dominating-file buffer-file-name ".dir-locals.el")))
            (make-local-variable
@@ -1019,9 +1023,7 @@ Version 2018-12-23"
 (setq user-full-name "Hyungbo Shim")
 
 (defun toggle-line-spacing-nil-half ()
-  "Toggle line spacing between no extra space to extra half line height.
-URL `http://ergoemacs.org/emacs/emacs_toggle_line_spacing.html'
-Version 2017-06-02"
+  "Toggle line spacing nil <-> 0.5"
   (interactive)
   (if line-spacing
       (setq line-spacing nil)
@@ -1041,5 +1043,19 @@ Version 2017-06-02"
 
 (when (memq window-system '(mac ns x))
   (exec-path-from-shell-initialize))
+;; Initialize environment (shell variables, eg. $PATH, $MANPATH)
+;; from the user’s shell.
 
 (require 'ox-rst)
+
+(setq dired-omit-verbose nil)
+;; When non-nil, show messages when omitting files.
+;; When nil, don’t show messages.
+
+;; Global Auto-Revert Mode is a global minor mode that reverts any
+;; buffer associated with a file when the file changes on disk.
+(global-auto-revert-mode 1)
+
+(setq auto-revert-verbose nil)
+;; When non-nil, a message is generated whenever a buffer is reverted.
+;; When nil, Auto-Revert Mode does not generate any messages.

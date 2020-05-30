@@ -14,3 +14,5 @@ These commands create the following symlinks in the home directory (~)
 .emacs.d  ->  <PATH>/.emacs.d
 
 After this, it would be better to byte compile all of the .el files.
+
+For ansi-term mode, make a symlink ~/.terminfo -> <PATH>/.terminfo. Note that the target of the link <PATH>/.terminfo should be adjusted appropriately depending the ocation of emacs. Originally, the termcap database for "eterm-color" was stored in the directory "e" and many other sources say it has to be "e", it had to be "65". Check this by "ls /usr/share/terminfo" and then "sudo find /usr/share/terminfo -name "eterm*"".

@@ -2,7 +2,12 @@
 ;;; This format is meant to be slightly human-readable;
 ;;; nevertheless, you probably don't want to edit it.
 ;;; -*- End Of Bookmark File Format Version Stamp -*-
-(("github.io sphinx conf.py"
+(("todo.org"
+ (filename . "~/org/todo.org")
+ (front-context-string . "* TODO [#C] mult")
+ (rear-context-string)
+ (position . 1))
+("github.io sphinx conf.py"
  (filename . "~/math/conf.py")
  (front-context-string . "# -*- coding: ut")
  (rear-context-string)
@@ -12,7 +17,7 @@
  (front-context-string . "\nIndices and tab")
  (rear-context-string . "\n   mathjaxtest\n")
  (position . 354))
-("karabiner"
+("karabiner config dir"
  (filename . "~/.config/karabiner/")
  (front-context-string . "karabiner.json\n ")
  (rear-context-string . "90 May 15 06:21 ")

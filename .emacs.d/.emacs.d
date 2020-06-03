@@ -1,1 +1,0 @@
-/Users/hbshim/Dropbox/Workspace/github_emacs_config_and_packages/.emacs.d

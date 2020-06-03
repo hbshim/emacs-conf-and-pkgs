@@ -3,6 +3,7 @@ abelian
 Adem
 adic
 adjoints
+adjugate
 adjunction
 affine
 affines
@@ -182,6 +183,7 @@ isometrically
 isometries
 isometry
 isotopy
+Jacobi's
 Jacobson
 Kronecker
 Krull
@@ -217,6 +219,7 @@ monoids
 monomials
 monomorphism
 monomorphisms
+multiplicativity
 Nagata
 Nakayama's
 naturality
@@ -317,6 +320,8 @@ subcomplex
 subcomplexes
 subdirect
 submanifold
+submatrices
+submatrix
 submersive
 subobject
 subobjects

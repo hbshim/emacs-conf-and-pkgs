@@ -233,7 +233,7 @@
  '(org-use-sub-superscripts (quote {}))
  '(package-selected-packages
    (quote
-    (ox-rst yasnippet helm-dired-history magithub htmlize proof-general latex-math-preview auto-complete helm-bibtex helm-fuzzier helm-flx exec-path-from-shell auctex helm)))
+    (adaptive-wrap auctex ox-rst yasnippet helm-dired-history magithub htmlize proof-general latex-math-preview auto-complete helm-bibtex helm-fuzzier helm-flx exec-path-from-shell helm)))
  '(pdf-view-midnight-colors (quote ("#232333" . "#c7c7c7")))
  '(preview-TeX-style-dir "~/.emacs.d/elpa/auctex-12.1.2/latex" t)
  '(preview-auto-cache-preamble t)
@@ -246,7 +246,8 @@
     ("\\RequirePackage["
      ("," . preview-default-option-list)
      "]{preview}[2004/11/05]" "\\PreviewMacro*\\parbox{}" "\\PreviewMacro*\\hltn")))
- '(preview-scale-function 0.9)
+ '(preview-image-type (quote png))
+ '(preview-scale-function 1.0)
  '(proof-three-window-enable t)
  '(proof-three-window-mode-policy (quote vertical))
  '(proof-tree-arguments (quote ("-debug")))
@@ -278,7 +279,8 @@
  '(reftex-section-prefixes (quote ((0 . "") (1 . "") (t . ""))))
  '(safe-local-variable-values
    (quote
-    ((eval add-hook
+    ((line-spacing . 0.5)
+     (eval add-hook
            (quote after-save-hook)
            (quote org-rst-export-to-rst)
            t t)
@@ -692,9 +694,8 @@ This represents the currently available screen area."
 (put 'scroll-left 'disabled nil)
 
 ;; delete trailing whitespaces before saving ---------------------------------
-
-(add-hook 'before-save-hook 'delete-trailing-whitespace)
-(put 'dired-find-alternate-file 'disabled nil)
+;; (I had to disable this because it makes saving too much slower than necessary.)
+;;(add-hook 'before-save-hook 'delete-trailing-whitespace)
 
 ;; latex for org mode
 ;; https://emacs.stackexchange.com/questions/18534/orgmode-mac-el-capitan-cant-find-latex
@@ -1059,3 +1060,8 @@ Version 2018-12-23"
 (setq auto-revert-verbose nil)
 ;; When non-nil, a message is generated whenever a buffer is reverted.
 ;; When nil, Auto-Revert Mode does not generate any messages.
+
+;; info > emacs > maintaining > version control
+;; To disable VC entirely, set the customizable variable vc-handled-backends to nil.
+;;(setq vc-handled-backends 'git)
+(put 'dired-find-alternate-file 'disabled nil)

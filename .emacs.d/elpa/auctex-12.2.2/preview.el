@@ -181,7 +181,10 @@ spec to avoid unnecessary evaluation time."
 	  (close preview-gs-close))
     (tiff (open preview-gs-open)
 	  (place preview-gs-place)
-	  (close preview-gs-close)))
+	  (close preview-gs-close))
+    (image-io (open preview-gs-open)
+              (place preview-gs-place)
+              (close preview-gs-close)))
   "Define functions for generating images.
 These functions get called in the process of generating inline
 images of the specified type.  The open function is called
@@ -211,17 +214,23 @@ function args" :inline t sexp))
     (dvipng png "-sDEVICE=png16m")
     (jpeg jpeg "-sDEVICE=jpeg")
     (pnm pbm "-sDEVICE=pnmraw")
-    (tiff tiff "-sDEVICE=tiff12nc"))
+    (tiff tiff "-sDEVICE=tiff12nc")
+    (image-io (image-io pdf t) "-sDEVICE=pdfwrite"))
   "*Alist of image types and corresponding Ghostscript options.
 The `dvipng' and `postscript' (don't use) entries really specify
 a fallback device when images can't be processed by the requested
 method, like when PDFTeX was used."
   :group 'preview-gs
   :type '(repeat (list :tag nil (symbol :tag "preview image-type")
-		       (symbol :tag "Emacs image-type")
+                       (choice (symbol :tag "Emacs image-type")
+                               (list :tag "Extended setting"
+                                     (symbol :tag "Emacs image-type")
+                                     (symbol :tag "File name extension")
+                                     (boolean :tag "Produces vector output")))
 		       (repeat :inline t :tag "Ghostscript options" string))))
 
-(defcustom preview-image-type 'png
+(defcustom preview-image-type
+(if (preview-supports-image-type 'image-io) 'image-io 'png)
   "*Image type to be used in images."
   :group 'preview-gs
   :type (append '(choice)
@@ -362,6 +371,13 @@ See also `preview-gs-command'."
   :group 'preview-gs
   :type '(repeat string))
 
+(defcustom preview-gs-vector-options '("-q" "-dDELAYSAFER" "-dNOPAUSE"
+                                      "-DNOPLATFONTS" "-dPrinted")
+  "*Like `preview-gs-options', but used when gs produces vector outputs.
+See also `preview-gs-command'."
+  :group 'preview-gs
+  :type '(repeat string))
+
 (defvar preview-gs-queue nil
   "List of overlays to convert using gs.
 Buffer-local to the appropriate TeX process buffer.")
@@ -395,6 +411,14 @@ follow changes in the displayed buffer area faster."
 (defvar preview-gs-image-type nil
   "Image type for gs produced images.")
 (make-variable-buffer-local 'preview-gs-image-type)
+
+(defvar preview-gs-image-extension nil
+  "Image file name extension for gs produced images.")
+(make-variable-buffer-local 'preview-gs-image-extension)
+
+(defvar preview-gs-image-vector-p nil
+  "Non-nil if gs produces vector output images.")
+(make-variable-buffer-local 'preview-gs-image-vector-p)
 
 (defvar preview-gs-sequence nil
   "Pair of sequence numbers for gs produced images.")
@@ -729,7 +753,7 @@ Gets the usual PROCESS and STRING parameters, see
 			     (format "%s/pr%d-%%d.%s"
 				     (car TeX-active-tempdir)
 				     (car preview-gs-sequence)
-				     preview-gs-image-type))))
+				     preview-gs-image-extension))))
 	   (process
 	    (apply #'start-process
 		   "Preview-Ghostscript"
@@ -759,14 +783,23 @@ Gets the usual PROCESS and STRING parameters, see
 (defun preview-gs-open (&optional setup)
   "Start a Ghostscript conversion pass.
 SETUP may contain a parser setup function."
-  (let ((image-info (assq preview-image-type preview-gs-image-type-alist)))
-    (setq preview-gs-image-type (nth 1 image-info))
-    (setq preview-gs-sequence nil)
-    (setq preview-gs-command-line (append
-				   preview-gs-options
-				   (nthcdr 2 image-info))
-	  preview-gs-init-string
-	  (format "{DELAYSAFER{.setsafe}if}stopped pop\
+   (let* ((image-info (assq preview-image-type preview-gs-image-type-alist))
+         (image-type-info (nth 1 image-info)))
+     (if (not (consp image-type-info))
+        (setq preview-gs-image-type image-type-info
+              preview-gs-image-extension image-type-info
+              preview-gs-image-vector-p nil)
+       (setq preview-gs-image-type (nth 0 image-type-info)
+            preview-gs-image-extension (nth 1 image-type-info)
+            preview-gs-image-vector-p (nth 2 image-type-info)))
+     (setq preview-gs-sequence nil)
+     (setq preview-gs-command-line (append
+                                    (if (not preview-gs-image-vector-p)
+                                        preview-gs-options
+                                      preview-gs-vector-options)
+				                            (nthcdr 2 image-info))
+	         preview-gs-init-string
+	         (format "{DELAYSAFER{.setsafe}if}stopped pop\
 /.preview-BP currentpagedevice/BeginPage get dup \
 null eq{pop{pop}bind}if def\
 <</BeginPage{currentpagedevice/PageSize get dup 0 get 1 ne exch 1 get 1 ne or\
@@ -903,7 +936,7 @@ Pure borderless black-on-white will return an empty string."
     (let ((process (preview-start-dvips preview-fast-conversion)))
       (setq TeX-sentinel-function #'preview-gs-dvips-sentinel)
       (list process (current-buffer) TeX-active-tempdir preview-ps-file
-	    preview-gs-image-type))))
+	    preview-gs-image-extension))))
 
 (defun preview-dvipng-process-setup ()
   "Set up dvipng process for conversion."
@@ -931,7 +964,7 @@ Pure borderless black-on-white will return an empty string."
   (let ((process (preview-start-pdf2dsc)))
     (setq TeX-sentinel-function #'preview-pdf2dsc-sentinel)
     (list process (current-buffer) TeX-active-tempdir preview-ps-file
-	  preview-gs-image-type)))
+	  preview-gs-image-extension)))
 
 (defun preview-dvips-abort ()
   "Abort a Dvips run."
@@ -1336,11 +1369,14 @@ given as ANSWER."
 	      (overlay-put ov 'filenames (cdr filenames))
 	      (preview-replace-active-icon
 	       ov
-	       (preview-create-icon (car newfile)
-				    preview-gs-image-type
-				    (preview-ascent-from-bb
-				     bbox)
-				    (aref preview-colors 2))))
+
+               (apply #'preview-create-icon
+                      (car newfile)
+                      preview-gs-image-type
+                      (preview-ascent-from-bb bbox)
+                      (aref preview-colors 2)
+                      (and preview-gs-image-vector-p
+                           (list (preview-size-from-bb bbox))))))
 	    (overlay-put ov 'queued nil)))))
     (while (and (< (length preview-gs-outstanding)
 		   preview-gs-outstanding-limit)
@@ -1357,7 +1393,7 @@ given as ANSWER."
 					     (format "pr%d-%d.%s"
 						     (car preview-gs-sequence)
 						     (cdr preview-gs-sequence)
-						     preview-gs-image-type)
+						     preview-gs-image-extension)
 					     TeX-active-tempdir))))))
 		 (bbox (aset queued 0
 			     (or (and preview-prefer-TeX-bb
@@ -1551,6 +1587,24 @@ numbers (can be float if available)."
 	     (> top 720))
 	(round (* 100.0 (/ (- top 720.0) (- top bottom))))
       100)))
+
+(defun preview-size-from-bb (bb)
+  "This calculates the image pixel size from its bounding box.
+When the ghostscript device produces vector outputs, the `-r'
+option does not change the page size of the produced output, but
+specifies the resolution for pattern fills and fonts that must be
+converted to bitmaps.  This function is used for calculating the
+size in pixels from the value passed to the `-r' option and the
+given bounding box."
+  (let ((res '(72.0 . 72.0)))
+    (dolist (option preview-gs-command-line)
+      (if (string-match "\\`-r\\([0-9.]+\\)x\\([0-9.]+\\)\\'" option)
+         (setq res (cons (string-to-number (match-string 1 option))
+                         (string-to-number (match-string 2 option))))))
+    (cons (round (* (- (aref bb 2) (aref bb 0))
+                   (/ (car res) 72.0)))
+         (round (* (- (aref bb 3) (aref bb 1))
+                   (/ (cdr res) 72.0))))))
 
 (defface preview-face '((((background dark))
 			 (:background "dark slate gray"))
@@ -3708,6 +3762,7 @@ If not a regular release, the date of the last change.")
        preview-pdf2dsc-command
        preview-gs-command
        preview-gs-options
+       preview-gs-vector-options
        preview-gs-image-type-alist
        preview-fast-conversion
        preview-prefer-TeX-bb

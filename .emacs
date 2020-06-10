@@ -235,7 +235,7 @@
    (quote
     (adaptive-wrap auctex ox-rst yasnippet helm-dired-history magithub htmlize proof-general latex-math-preview auto-complete helm-bibtex helm-fuzzier helm-flx exec-path-from-shell helm)))
  '(pdf-view-midnight-colors (quote ("#232333" . "#c7c7c7")))
- '(preview-TeX-style-dir "~/.emacs.d/elpa/auctex-12.1.2/latex" t)
+ '(preview-TeX-style-dir "~/.emacs.d/elpa/auctex-12.1.2/latex")
  '(preview-auto-cache-preamble t)
  '(preview-auto-reveal nil)
  '(preview-default-option-list
@@ -246,8 +246,6 @@
     ("\\RequirePackage["
      ("," . preview-default-option-list)
      "]{preview}[2004/11/05]" "\\PreviewMacro*\\parbox{}" "\\PreviewMacro*\\hltn")))
- '(preview-image-type (quote png))
- '(preview-scale-function 1.0)
  '(proof-three-window-enable t)
  '(proof-three-window-mode-policy (quote vertical))
  '(proof-tree-arguments (quote ("-debug")))
@@ -279,7 +277,11 @@
  '(reftex-section-prefixes (quote ((0 . "") (1 . "") (t . ""))))
  '(safe-local-variable-values
    (quote
-    ((line-spacing . 0.5)
+    ((eval add-hook
+           (quote after-save-hook)
+           (quote org-html-export-to-html)
+           t t)
+     (line-spacing . 0.5)
      (eval add-hook
            (quote after-save-hook)
            (quote org-rst-export-to-rst)
@@ -1065,3 +1067,10 @@ Version 2018-12-23"
 ;; To disable VC entirely, set the customizable variable vc-handled-backends to nil.
 ;;(setq vc-handled-backends 'git)
 (put 'dired-find-alternate-file 'disabled nil)
+
+(add-hook 'org-mode-hook 'abbrev-mode)
+
+(setq vc-follow-symlinks t)
+
+;; save abbrevs when files are saved
+(setq save-abbrevs 'silent)

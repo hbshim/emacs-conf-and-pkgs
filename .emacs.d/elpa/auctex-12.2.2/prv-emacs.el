@@ -77,19 +77,21 @@ Consults `preview-transparent-color'."
 			  (nth 1 preview-transparent-color)
 			  'default)))))
 
-(defsubst preview-create-icon-1 (file type ascent border)
+(defsubst preview-create-icon-1 (file type ascent border &optional size)
   `(image
     :file ,file
     :type ,type
     :ascent ,ascent
     ,@(and border
-	   '(:mask (heuristic t)))))
+           '(:mask (heuristic t)))
+    ,@(and size
+           `(:width ,(car size) :height ,(cdr size)))))
 
-(defun preview-create-icon (file type ascent border)
+
+(defun preview-create-icon (file type ascent border &optional size)
   "Create an icon from FILE, image TYPE, ASCENT and BORDER."
-  (list
-   (preview-create-icon-1 file type ascent border)
-   file type ascent border))
+   `(,(preview-create-icon-1 file type ascent border size)
+     ,file ,type ,ascent ,border ,@(and size (list size))))
 
 (put 'preview-filter-specs :type
      #'(lambda (keyword value &rest args)
@@ -577,7 +579,8 @@ The fourth value is the transparent border thickness."
 				(nth 2 image)
 				(if (< (length image) 4)
 				    (preview-get-heuristic-mask)
-				  (nth 3 image))))))
+          (nth 3 image))
+        (nth 4 image)))))
 
 (defsubst preview-supports-image-type (imagetype)
   "Check if IMAGETYPE is supported."

@@ -13,9 +13,7 @@
 
 (define-abbrev-table 'apropos-mode-abbrev-table '())
 
-(define-abbrev-table 'awk-mode-abbrev-table
-  '(
-   ))
+(define-abbrev-table 'awk-mode-abbrev-table '())
 
 (define-abbrev-table 'bib-mode-abbrev-table '())
 
@@ -29,13 +27,9 @@
 
 (define-abbrev-table 'bookmark-edit-annotation-mode-abbrev-table '())
 
-(define-abbrev-table 'c++-mode-abbrev-table
-  '(
-   ))
+(define-abbrev-table 'c++-mode-abbrev-table '())
 
-(define-abbrev-table 'c-mode-abbrev-table
-  '(
-   ))
+(define-abbrev-table 'c-mode-abbrev-table '())
 
 (define-abbrev-table 'calendar-mode-abbrev-table '())
 
@@ -103,9 +97,7 @@
 
 (define-abbrev-table 'image-dired-thumbnail-mode-abbrev-table '())
 
-(define-abbrev-table 'java-mode-abbrev-table
-  '(
-   ))
+(define-abbrev-table 'java-mode-abbrev-table '())
 
 (define-abbrev-table 'js-jsx-mode-abbrev-table '())
 
@@ -119,16 +111,18 @@
     ("Holder" "H\\\"{o}lder" nil 3)
     ("IBN" "invariant basis number" nil 9)
     ("LEt" "Let" nil 8)
-    ("Lra" "Leftrightarrow" nil 211)
+    ("Lra" "Leftrightarrow" nil 216)
     ("Prufer" "Pr\\\"{u}fer" nil 6)
-    ("Ra" "Rightarrow" nil 317)
+    ("Ra" "Rightarrow" nil 330)
     ("TFAE" "the followings are equivalent" nil 14)
     ("Tfae" "The followings are equivalent" nil 10)
     ("abel" "Abel" nil 11)
     ("acc" "ascending chain condition" nil 4)
     ("adams" "Adams" nil 9)
     ("additivty" "additivity" nil 1)
+    ("ajugate" "adjugate" nil 1)
     ("alhpa" "alpha" nil 4)
+    ("ambigously" "ambiguously" nil 1)
     ("artinian" "Artinian" nil 26)
     ("assiging" "assigning" nil 1)
     ("assocated" "associated" nil 1)
@@ -137,9 +131,10 @@
     ("bezout" "B\\'{e}zout" nil 31)
     ("bioplus" "bigoplus" nil 1)
     ("blude" "blue" nil 1)
-    ("blue" "blue" nil 1)
+    ("blue" "blue" nil 2)
     ("boolean" "Boolean" nil 36)
     ("borel" "Borel" nil 18)
+    ("bottm" "bottom" nil 1)
     ("cartesian" "Cartesian" nil 10)
     ("cartier" "Cartier" nil 1)
     ("cauchy" "Cauchy" nil 3)
@@ -150,6 +145,7 @@
     ("compactible" "compatible" nil 1)
     ("compnent" "component" nil 2)
     ("compoent" "component" nil 0)
+    ("compuation" "computation" nil 1)
     ("condtaing" "containing" nil 1)
     ("constains" "contains" nil 1)
     ("construcible" "constructible" nil 2)
@@ -159,16 +155,19 @@
     ("dcc" "descending chain condition" nil 2)
     ("dedekind" "Dedekind" nil 19)
     ("del" "Delta" nil 7)
+    ("desmidefinite" "semidefinite" nil 1)
     ("deteremined" "determined" nil 2)
     ("deteremines" "determines" nil 1)
+    ("diagral" "diagonal" nil 1)
     ("dirac" "Dirac" nil 2)
     ("dvr" "discrete valuation ring" nil 30)
     ("dvrs" "discrete valuation rings" nil 12)
     ("eilenberg" "Eilenberg" nil 3)
     ("embeeding" "embedding" nil 1)
+    ("equialvant" "equivalent" nil 1)
     ("es" "exact sequence" nil 0)
     ("etale" "\\'etale" nil 6)
-    ("euclidean" "Euclidean" nil 1)
+    ("euclidean" "Euclidean" nil 2)
     ("euler" "Euler" nil 13)
     ("euler's" "Euler's" nil 2)
     ("excat" "exact" nil 1)
@@ -191,18 +190,19 @@
     ("haar" "Haar" nil 1)
     ("hausdorff" "Hausdorff" nil 9)
     ("heine" "Heine" nil 0)
-    ("hermitian" "Hermitian" nil 3)
+    ("hermitian" "Hermitian" nil 15)
     ("hilbert" "Hilbert" nil 2)
     ("holomoprhic" "holomorphic" nil 1)
     ("homogenous" "homogeneous" nil 6)
     ("hookra" "hookrightarrow" nil 8)
     ("hopf" "Hopf" nil 14)
     ("htat" "that" nil 1)
-    ("iff" "if and only if" nil 70)
+    ("iff" "if and only if" nil 74)
+    ("inquality" "inequality" nil 2)
     ("irrducible" "irreducible" nil 1)
     ("irreduible" "irreducible" nil 0)
     ("isomorhpism" "isomorphism" nil 1)
-    ("istb" "is said to be" nil 75)
+    ("istb" "is said to be" nil 80)
     ("jacobson" "Jacobson" nil 5)
     ("kronecker" "Kronecker" nil 1)
     ("krull" "Krull" nil 14)
@@ -219,6 +219,7 @@
     ("lra" "leftrightarrow" nil 42)
     ("maclane" "MacLane" nil 3)
     ("maclaurin" "Maclaurin" nil 5)
+    ("metrices" "matrices" nil 1)
     ("milnor" "Milnor" nil 0)
     ("mittag" "Mittag" nil 1)
     ("mnfld" "manifold" nil 3)
@@ -228,12 +229,14 @@
     ("multipliation" "multiplication" nil 1)
     ("nagata" "Nagata" nil 2)
     ("neotherian" "Noetherian" nil 0)
+    ("nessessarily" "necessarily" nil 1)
     ("noetherian" "Noetherian" nil 190)
     ("notehrian" "Noetherian" nil 1)
     ("notheiran" "Noetherian" nil 1)
     ("notherian" "Noetherian" nil 3)
     ("numbder" "number" nil 2)
     ("ol" "overline" nil 6)
+    ("opeations" "operations" nil 1)
     ("oriention" "orientation" nil 1)
     ("orthoronal" "orthonormal" nil 1)
     ("otehr" "other" nil 0)
@@ -251,11 +254,13 @@
     ("pontrjagin" "Pontrjagin" nil 5)
     ("poset" "partially ordered set" nil 4)
     ("prufer" "Pr\\\"{u}fer" nil 1)
-    ("ra" "rightarrow" nil 1617)
+    ("ra" "rightarrow" nil 1620)
     ("radon" "Radon" nil 2)
+    ("resp" "respectively" nil 8)
     ("respecitvely" "respectively" nil 1)
     ("riemann" "Riemann" nil 1)
     ("riesz" "Riesz" nil 1)
+    ("rref" "reduced row echelon form" nil 0)
     ("satuarated" "saturated" nil 1)
     ("schreier" "Schreier" nil 5)
     ("segre" "Segre" nil 2)
@@ -268,6 +273,7 @@
     ("subest" "subset" nil 1)
     ("susbet" "subset" nil 1)
     ("thom" "Thom" nil 2)
+    ("toeplitz" "Toeplitz" nil 1)
     ("topologcial" "topological" nil 0)
     ("trileft" "triangleleft" nil 1)
     ("ufd" "unique factorization domain" nil 24)
@@ -279,7 +285,7 @@
     ("weil" "Weil" nil 2)
     ("whitney" "Whitney" nil 21)
     ("wlog" "without loss of generality" nil 0)
-    ("wrt" "with respect to" nil 26)
+    ("wrt" "with respect to" nil 28)
     ("zariski" "Zariski" nil 13)
    ))
 
@@ -293,9 +299,7 @@
 
 (define-abbrev-table 'nroff-mode-abbrev-table '())
 
-(define-abbrev-table 'objc-mode-abbrev-table
-  '(
-   ))
+(define-abbrev-table 'objc-mode-abbrev-table '())
 
 (define-abbrev-table 'occur-edit-mode-abbrev-table '())
 
@@ -309,13 +313,13 @@
 
 (define-abbrev-table 'package-menu-mode-abbrev-table '())
 
-(define-abbrev-table 'pike-mode-abbrev-table
-  '(
-   ))
+(define-abbrev-table 'pike-mode-abbrev-table '())
 
 (define-abbrev-table 'plain-tex-mode-abbrev-table '())
 
 (define-abbrev-table 'process-menu-mode-abbrev-table '())
+
+(define-abbrev-table 'profiler-report-mode-abbrev-table '())
 
 (define-abbrev-table 'prog-mode-abbrev-table '())
 
@@ -341,7 +345,9 @@
 
 (define-abbrev-table 'reftex-select-label-mode-abbrev-table '())
 
-(define-abbrev-table 'rst-mode-abbrev-table '())
+(define-abbrev-table 'rst-mode-abbrev-table
+  '(
+   ))
 
 (define-abbrev-table 'rst-toc-mode-abbrev-table '())
 

@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: binom_with_dollar_prefix
+# key: $\binom
+# --
+\$\binom{$1}{$2} $0

@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: enumi
+# key: \setcounter{enumi}
+# --
+\\setcounter{enumi}{${0:n}} % enumerate starts with n+1

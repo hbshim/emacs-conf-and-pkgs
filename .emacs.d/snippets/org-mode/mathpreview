@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: mathpreview
+# key: mathpreview
+# --
+#+STARTUP: latexpreview
+# C-c C-x C-l (org-latex-preview)
+$0

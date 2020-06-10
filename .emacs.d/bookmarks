@@ -2,7 +2,12 @@
 ;;; This format is meant to be slightly human-readable;
 ;;; nevertheless, you probably don't want to edit it.
 ;;; -*- End Of Bookmark File Format Version Stamp -*-
-(("todo.org"
+(("repository"
+ (filename . "~/Dropbox/hbshim/repository/")
+ (front-context-string . "  /Users/hbshim/")
+ (rear-context-string)
+ (position . 1))
+("todo.org"
  (filename . "~/org/todo.org")
  (front-context-string . "* TODO [#C] mult")
  (rear-context-string)

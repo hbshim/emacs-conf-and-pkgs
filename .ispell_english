@@ -4,6 +4,7 @@ Adem
 adic
 adjoints
 adjugate
+adjugates
 adjunction
 affine
 affines
@@ -18,6 +19,7 @@ anodyne
 anticommutative
 antiderivative
 antiderivatives
+antilinear
 antipodal
 antireflexivity
 antisymmetricity
@@ -89,6 +91,7 @@ comultiplication
 concavity
 conjugacy
 connexity
+consimilarity
 contractibility
 contractible
 contraposition
@@ -280,6 +283,7 @@ Rabinowitch's
 Ratliff
 rebase
 Rees
+regularized
 reindex
 reindexing
 representability
@@ -305,12 +309,14 @@ separably
 separatedness
 Serre
 Serre's
+sesquilinear
 Simplication
 simplices
 simplicial
 socle
 Steenrod
 Stiefel
+Stirling's
 straightedge
 subadditive
 subalgebra
@@ -348,6 +354,7 @@ tensoring
 thm
 Thom
 TODO
+Toeplitz
 topologize
 topologized
 topologizes
@@ -371,6 +378,7 @@ uple
 Valuative
 Vietoris
 von
+Wedderburn's
 Weierstrass
 Weil
 Yoneda

@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: binom_with_curly_bracket_prefix
+# key: {\binom
+# --
+{\binom{$1}{$2} $0

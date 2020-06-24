@@ -238,7 +238,7 @@ frequent searches (e.g. your own publications)."
                        (and preselect
                             (> preselect 0)
                             (helm-next-line preselect)))
-          :candidate-number-limit (max 500 (1+ (or preselect 0)))
+          :candidate-number-limit (max 9999999 (1+ (or preselect 0)))
           :bibtex-candidates candidates
           :bibtex-local-bib local-bib)))
 

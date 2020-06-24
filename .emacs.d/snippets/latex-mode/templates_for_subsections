@@ -1,0 +1,42 @@
+# -*- mode: snippet -*-
+# name: template_for_subsections
+# key: tempsub
+# --
+\subsection{Equivalences}
+
+\subsection{Subtypes}
+% eg. a "subring" is a subtype of a "ring"
+% eg. a "Noetherian ring" is a subtype of a "ring"
+% noneg. "ideal" is not a subtype but a derivative of a "ring"
+% eg: "every ideal of R is finitely generated" is an implication
+% eg: "R is Noetherian" is a subtyping
+
+\subsection{Examples}
+% CONCRETE sufficiencies
+% non-eg: Artinian rings are Noetherian rings but Artinian rings are not 
+% examples of Noetherian rings
+% eg: Z is a ring and Z is a concrete object not an abstract class
+
+\subsection{Stabilities}
+% if the type is preserved after certain operation, it is stable
+% in the opposite direction, a result of an operation derives a property
+% on the original object, is also considered as the result on stability
+
+\subsection{Implications}
+% implication that is not subtyped propositions.
+% eg: "every ideal of R is finitely generated" is an implication
+% eg: "R is Noetherian" is a subtyping
+
+\subsection{Derivatives}
+% These are types that are derived but not of the subtype
+% eg. "ideal" is a derivative of "ring" because an ideal is a module
+% non-eg. a "subring" is not a derivative of "ring" but is its subtype
+% non-eg. a "Noetherian ring" is not a derivative of a "ring" but a subtype
+
+\subsection{Supertypes}
+% "if A, then B:>C" means that C is a supertype of B
+
+\subsection{Temp}
+% temporary dumps
+
+$0

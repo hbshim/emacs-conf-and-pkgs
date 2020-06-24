@@ -5,6 +5,8 @@
 
 (define-abbrev-table 'Info-edit-mode-abbrev-table '())
 
+(define-abbrev-table 'Man-mode-abbrev-table '())
+
 (define-abbrev-table 'TeX-error-overview-mode-abbrev-table '())
 
 (define-abbrev-table 'TeX-output-mode-abbrev-table '())
@@ -91,6 +93,8 @@
 
 (define-abbrev-table 'html-mode-abbrev-table '())
 
+(define-abbrev-table 'ibuffer-mode-abbrev-table '())
+
 (define-abbrev-table 'idl-mode-abbrev-table '())
 
 (define-abbrev-table 'image-dired-display-image-mode-abbrev-table '())
@@ -111,9 +115,9 @@
     ("Holder" "H\\\"{o}lder" nil 3)
     ("IBN" "invariant basis number" nil 9)
     ("LEt" "Let" nil 8)
-    ("Lra" "Leftrightarrow" nil 216)
+    ("Lra" "Leftrightarrow" nil 217)
     ("Prufer" "Pr\\\"{u}fer" nil 6)
-    ("Ra" "Rightarrow" nil 330)
+    ("Ra" "Rightarrow" nil 344)
     ("TFAE" "the followings are equivalent" nil 14)
     ("Tfae" "The followings are equivalent" nil 10)
     ("abel" "Abel" nil 11)
@@ -123,7 +127,7 @@
     ("ajugate" "adjugate" nil 1)
     ("alhpa" "alpha" nil 4)
     ("ambigously" "ambiguously" nil 1)
-    ("artinian" "Artinian" nil 26)
+    ("artinian" "Artinian" nil 40)
     ("assiging" "assigning" nil 1)
     ("assocated" "associated" nil 1)
     ("banach" "Banach" nil 1)
@@ -141,7 +145,7 @@
     ("characteritic" "characteristic" nil 1)
     ("chern" "Chern" nil 11)
     ("comlex" "complex" nil 1)
-    ("comm" "commutative" nil 2)
+    ("comm" "commutative" nil 5)
     ("compactible" "compatible" nil 1)
     ("compnent" "component" nil 2)
     ("compoent" "component" nil 0)
@@ -203,7 +207,7 @@
     ("irreduible" "irreducible" nil 0)
     ("isomorhpism" "isomorphism" nil 1)
     ("istb" "is said to be" nil 80)
-    ("jacobson" "Jacobson" nil 5)
+    ("jacobson" "Jacobson" nil 6)
     ("kronecker" "Kronecker" nil 1)
     ("krull" "Krull" nil 14)
     ("kunneth" "K\\\"{u}nneth" nil 3)
@@ -230,10 +234,11 @@
     ("nagata" "Nagata" nil 2)
     ("neotherian" "Noetherian" nil 0)
     ("nessessarily" "necessarily" nil 1)
-    ("noetherian" "Noetherian" nil 190)
+    ("nilponent" "nilpotent" nil 1)
+    ("noetherian" "Noetherian" nil 210)
     ("notehrian" "Noetherian" nil 1)
     ("notheiran" "Noetherian" nil 1)
-    ("notherian" "Noetherian" nil 3)
+    ("notherian" "Noetherian" nil 4)
     ("numbder" "number" nil 2)
     ("ol" "overline" nil 6)
     ("opeations" "operations" nil 1)
@@ -248,15 +253,15 @@
     ("permuations" "permutations" nil 1)
     ("peroid" "period" nil 2)
     ("picard" "Picard" nil 7)
-    ("pid" "principal ideal domain" nil 3)
+    ("pid" "principal ideal domain" nil 4)
     ("poincare" "Poincar\\'{e}" nil 6)
     ("poisson" "Poisson" nil 2)
     ("pontrjagin" "Pontrjagin" nil 5)
     ("poset" "partially ordered set" nil 4)
     ("prufer" "Pr\\\"{u}fer" nil 1)
-    ("ra" "rightarrow" nil 1620)
+    ("ra" "rightarrow" nil 1626)
     ("radon" "Radon" nil 2)
-    ("resp" "respectively" nil 8)
+    ("resp" "respectively" nil 12)
     ("respecitvely" "respectively" nil 1)
     ("riemann" "Riemann" nil 1)
     ("riesz" "Riesz" nil 1)
@@ -266,11 +271,13 @@
     ("segre" "Segre" nil 2)
     ("separted" "separated" nil 0)
     ("ses" "short exact sequence" nil 5)
+    ("simpliest" "simplest" nil 1)
     ("sqeuence" "sequence" nil 1)
-    ("st" "such that" nil 184)
+    ("st" "such that" nil 185)
     ("steenrod" "Steenrod" nil 7)
     ("stiefel" "Stiefel" nil 19)
     ("subest" "subset" nil 1)
+    ("surjectiviey" "surjectivity" nil 1)
     ("susbet" "subset" nil 1)
     ("thom" "Thom" nil 2)
     ("toeplitz" "Toeplitz" nil 1)
@@ -290,6 +297,8 @@
    ))
 
 (define-abbrev-table 'lisp-mode-abbrev-table '())
+
+(define-abbrev-table 'mercury-mode-abbrev-table '())
 
 (define-abbrev-table 'message-mode-abbrev-table '())
 
@@ -323,6 +332,10 @@
 
 (define-abbrev-table 'prog-mode-abbrev-table '())
 
+(define-abbrev-table 'prolog-inferior-mode-abbrev-table '())
+
+(define-abbrev-table 'prolog-mode-abbrev-table '())
+
 (define-abbrev-table 'proof-goals-mode-abbrev-table '())
 
 (define-abbrev-table 'proof-mode-abbrev-table '())
@@ -345,9 +358,7 @@
 
 (define-abbrev-table 'reftex-select-label-mode-abbrev-table '())
 
-(define-abbrev-table 'rst-mode-abbrev-table
-  '(
-   ))
+(define-abbrev-table 'rst-mode-abbrev-table '())
 
 (define-abbrev-table 'rst-toc-mode-abbrev-table '())
 

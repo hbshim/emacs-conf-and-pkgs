@@ -186,7 +186,7 @@
    (quote
     ("bb08c73af94ee74453c90422485b29e5643b73b05e8de029a6909af6a3fb3f58" "1b8d67b43ff1723960eb5e0cba512a2c7a2ad544ddb2533a90101fd1852b426e" "73c69e346ec1cb3d1508c2447f6518a6e582851792a8c0e57a22d6b9948071b4" "628278136f88aa1a151bb2d6c8a86bf2b7631fbea5f0f76cba2a0079cd910f7d" default)))
  '(default-frame-alist (quote ((width . 80) (height . 70) (left . 0) (top . 0))))
- '(dired-listing-switches "-Alt")
+ '(dired-listing-switches "-Alhto")
  '(electric-pair-mode t)
  '(fci-rule-color "#d6d6d6")
  '(flycheck-color-mode-line-face-to-color (quote mode-line-buffer-id))
@@ -206,6 +206,8 @@
  '(helm-split-window-inside-p t)
  '(highlight-nonselected-windows t)
  '(indent-tabs-mode nil)
+ '(jit-lock-stealth-load 50)
+ '(jit-lock-stealth-time 16)
  '(linum-disabled-modes-list
    (quote
     (eshell-mode wl-summary-mode compilation-mode org-mode text-mode dired-mode pdf-view-mode Custom)))
@@ -233,9 +235,8 @@
  '(org-use-sub-superscripts (quote {}))
  '(package-selected-packages
    (quote
-    (adaptive-wrap auctex ox-rst yasnippet helm-dired-history magithub htmlize proof-general latex-math-preview auto-complete helm-bibtex helm-fuzzier helm-flx exec-path-from-shell helm)))
+    (adaptive-wrap ox-rst helm-dired-history magithub htmlize proof-general latex-math-preview auto-complete helm-bibtex helm-fuzzier helm-flx helm)))
  '(pdf-view-midnight-colors (quote ("#232333" . "#c7c7c7")))
- '(preview-TeX-style-dir "~/.emacs.d/elpa/auctex-12.1.2/latex")
  '(preview-auto-cache-preamble t)
  '(preview-auto-reveal nil)
  '(preview-default-option-list
@@ -246,6 +247,8 @@
     ("\\RequirePackage["
      ("," . preview-default-option-list)
      "]{preview}[2004/11/05]" "\\PreviewMacro*\\parbox{}" "\\PreviewMacro*\\hltn")))
+ '(preview-gs-command "/usr/local/bin/gs")
+ '(preview-scale-function 1.0)
  '(proof-three-window-enable t)
  '(proof-three-window-mode-policy (quote vertical))
  '(proof-tree-arguments (quote ("-debug")))
@@ -448,7 +451,8 @@
 ;;                     “Find File:” default path
 ;; ------------------------------------------------------------
 ;; https://stackoverflow.com/questions/6464003/emacs-find-file-default-path
-(setq default-directory "~/Documents")
+;;(setq default-directory "~")
+
 
 ;; ------------------------------------------------------------
 ;;                  my scripts
@@ -1074,3 +1078,7 @@ Version 2018-12-23"
 
 ;; save abbrevs when files are saved
 (setq save-abbrevs 'silent)
+
+;; helm-bibtex
+;; The default fields used for searching are: author, title, year, BibTeX key, entry type (article, inproceedings, ...). The variable bibtex-completion-addition-search-fields can be used to extend this list.
+(setq bibtex-completion-additional-search-fields '(keywords))

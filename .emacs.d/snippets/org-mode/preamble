@@ -1,0 +1,15 @@
+# -*- mode: snippet -*-
+# name: org preamble
+# key: \preamble
+# --
+#+Time-stamp: "2020-10-28 01:54:24"
+#+TITLE: $1
+#+AUTHOR: 
+#+DATE: 
+#+EMAIL: 
+#+LANGUAGE: en
+#+OPTIONS: toc:nil
+#+STARTUP: latexpreview
+# C-c C-x C-l (org-latex-preview)
+
+$0

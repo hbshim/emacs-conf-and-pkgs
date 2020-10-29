@@ -2,7 +2,42 @@
 ;;; This format is meant to be slightly human-readable;
 ;;; nevertheless, you probably don't want to edit it.
 ;;; -*- End Of Bookmark File Format Version Stamp -*-
-(("inbox note"
+(("Pregnancy"
+ (filename . "~/Dropbox/Pregnancy/")
+ (front-context-string . "ER_Abongton Hosp")
+ (rear-context-string . "6M Oct 25 15:28 ")
+ (position . 137))
+("Coq"
+ (filename . "~/Dropbox/Workspace/Coq/")
+ (front-context-string . "CoqArt\n  -rw-r--")
+ (rear-context-string . "2B Feb  9  2020 ")
+ (position . 138))
+("Documents"
+ (filename . "~/Dropbox/hbshim/Documents/")
+ (front-context-string . "bibtex-library\n ")
+ (rear-context-string . "3K Aug 11 13:53 ")
+ (position . 144))
+("Application Support"
+ (filename . "~/Library/Application Support/")
+ (front-context-string . "com.apple.spotli")
+ (rear-context-string . "56 Jul 14 13:04 ")
+ (position . 145))
+("Applications"
+ (filename . "/Applications/")
+ (front-context-string . "Dropbox.app\n  dr")
+ (rear-context-string . "96 Jul  9 20:21 ")
+ (position . 117))
+("dwhelper"
+ (filename . "~/dwhelper/")
+ (front-context-string . "Iori REBD-410 Io")
+ (rear-context-string . "52 Jul  8 13:54 ")
+ (position . 134))
+("to_be_bibtexed"
+ (filename . "~/Dropbox/hbshim/Documents/to_be_bibtexed/")
+ (front-context-string . "  drwxr-xr-x@ 97")
+ (rear-context-string . "ilable 31113340\n")
+ (position . 111))
+("inbox note"
  (filename . "~/org/inbox.org")
  (front-context-string)
  (rear-context-string)

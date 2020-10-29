@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: inline_code_in_commenting
+# key: []
+# --
+%[$0]%

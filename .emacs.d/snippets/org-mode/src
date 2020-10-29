@@ -1,7 +1,6 @@
 # -*- mode: snippet -*-
 # name: SRC
-# key: #+BEGIN_SRC
+# key: #+src
 # --
-#+BEGIN_SRC $1
-$0
+#+BEGIN_SRC $0
 #+END_SRC

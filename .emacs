@@ -1,3 +1,4 @@
+;; Time-stamp: "2020-10-29 15:55:36"
 (require 'package)
 (let* ((no-ssl (and (memq system-type '(windows-nt ms-dos))
                     (not (gnutls-available-p))))
@@ -93,92 +94,8 @@
  '(company-quickhelp-color-foreground "#232333")
  '(compilation-message-face (quote default))
  '(coq-maths-menu-enable t)
- '(coq-prog-name "~/math/HoTT/hoqtop")
+ '(coq-prog-args (quote ("-topfile" "-emacs")))
  '(coq-shortcut-alist nil)
- '(coq-token-symbol-map
-   (quote
-    (("alpha" "α")
-     ("beta" "β")
-     ("gamma" "γ")
-     ("delta" "δ")
-     ("epsilon" "ε")
-     ("zeta" "ζ")
-     ("eta" "η")
-     ("theta" "θ")
-     ("iota" "ι")
-     ("kappa" "κ")
-     ("lambda" "λ")
-     ("mu" "μ")
-     ("nu" "ν")
-     ("xi" "ξ")
-     ("pi" "π")
-     ("rho" "ρ")
-     ("sigma" "σ")
-     ("tau" "τ")
-     ("upsilon" "υ")
-     ("phi" "ϕ")
-     ("chi" "χ")
-     ("psi" "ψ")
-     ("omega" "ω")
-     ("Gamma" "Γ")
-     ("Delta" "Δ")
-     ("Theta" "Θ")
-     ("Lambda" "Λ")
-     ("Xi" "Ξ")
-     ("Pi" "Π")
-     ("Sigma" "Σ")
-     ("Upsilon" "Υ")
-     ("Phi" "Φ")
-     ("Psi" "Ψ")
-     ("Omega" "Ω")
-     ("forall" "∀")
-     ("exists" "∃")
-     ("nat" "ℕ" type)
-     ("complex" "ℂ" type)
-     ("real" "ℝ" type)
-     ("int" "ℤ" type)
-     ("Z" "ℤ" type)
-     ("rat" "ℚ" type)
-     ("bool" "B" underline type)
-     ("false" "false" bold sans)
-     ("true" "true" bold sans)
-     ("WHILE" "WHILE" bold sans)
-     ("DO" "DO" bold sans)
-     ("END" "END" bold sans)
-     ("SKIP" "SKIP" bold sans)
-     ("THEN" "THEN" bold sans)
-     ("ELSE" "ELSE" bold sans)
-     ("IFB" "IFB" bold sans)
-     ("FI" "FI" bold sans)
-     ("{{" "⦃" bold)
-     ("}}" "⦄" bold)
-     ("lhd" "⊲")
-     ("rhd" "⊳")
-     ("<=" "≤")
-     (">=" "≥")
-     ("=>" "⇒")
-     ("->" "→")
-     ("<-" "←")
-     ("<->" "↔")
-     ("++" "⧺")
-     ("<<" "《")
-     (">>" "》")
-     ("===" "≡")
-     ("=/=" "≢")
-     ("=~=" "≅")
-     ("==b" "≡")
-     ("<>b" "≢")
-     ("-->" "⟹-")
-     ("++>" "⟹+")
-     ("==>" "⟹")
-     (":=" "≔")
-     ("|-" "⊢")
-     ("<>" "≠")
-     ("-|" "⊣")
-     ("\\/" "∨")
-     ("/\\" "∧")
-     ("~" "¬")
-     ("============================" "⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯" bold tactical))))
  '(coq-unicode-tokens-enable t)
  '(coq-use-project-file nil)
  '(custom-enabled-themes nil)
@@ -186,7 +103,7 @@
    (quote
     ("bb08c73af94ee74453c90422485b29e5643b73b05e8de029a6909af6a3fb3f58" "1b8d67b43ff1723960eb5e0cba512a2c7a2ad544ddb2533a90101fd1852b426e" "73c69e346ec1cb3d1508c2447f6518a6e582851792a8c0e57a22d6b9948071b4" "628278136f88aa1a151bb2d6c8a86bf2b7631fbea5f0f76cba2a0079cd910f7d" default)))
  '(default-frame-alist (quote ((width . 80) (height . 70) (left . 0) (top . 0))))
- '(dired-listing-switches "-Alhto")
+ '(dired-listing-switches "-Alth")
  '(electric-pair-mode t)
  '(fci-rule-color "#d6d6d6")
  '(flycheck-color-mode-line-face-to-color (quote mode-line-buffer-id))
@@ -206,8 +123,6 @@
  '(helm-split-window-inside-p t)
  '(highlight-nonselected-windows t)
  '(indent-tabs-mode nil)
- '(jit-lock-stealth-load 50)
- '(jit-lock-stealth-time 16)
  '(linum-disabled-modes-list
    (quote
     (eshell-mode wl-summary-mode compilation-mode org-mode text-mode dired-mode pdf-view-mode Custom)))
@@ -235,7 +150,7 @@
  '(org-use-sub-superscripts (quote {}))
  '(package-selected-packages
    (quote
-    (adaptive-wrap ox-rst helm-dired-history magithub htmlize proof-general latex-math-preview auto-complete helm-bibtex helm-fuzzier helm-flx helm)))
+    (aggressive-indent dired-single dired-launch adaptive-wrap ox-rst helm-dired-history magithub htmlize proof-general latex-math-preview auto-complete helm-bibtex helm-fuzzier helm-flx helm)))
  '(pdf-view-midnight-colors (quote ("#232333" . "#c7c7c7")))
  '(preview-auto-cache-preamble t)
  '(preview-auto-reveal nil)
@@ -302,6 +217,7 @@
  '(show-paren-when-point-inside-paren t)
  '(size-indication-mode t)
  '(sp-show-pair-delay 0)
+ '(time-stamp-format "%:y-%02m-%02d %02H:%02M:%02S")
  '(tool-bar-mode nil)
  '(uniquify-buffer-name-style nil nil (uniquify))
  '(utop-command "opam config exec -- utop -emacs" nil nil "https://github.com/ocaml-community/utop")
@@ -1016,7 +932,7 @@ Version 2018-12-23"
                  ;; Set dired-x buffer-local variables here.  For example:
                  (dired-omit-mode 1)
                  ))
-(setq dired-listing-switches "-Alt")
+(setq dired-listing-switches "-Alth")
 (setq inhibit-startup-screen nil)
 
 (define-key helm-find-files-map (kbd "C-^") 'helm-find-files-up-one-level)
@@ -1082,3 +998,116 @@ Version 2018-12-23"
 ;; helm-bibtex
 ;; The default fields used for searching are: author, title, year, BibTeX key, entry type (article, inproceedings, ...). The variable bibtex-completion-addition-search-fields can be used to extend this list.
 (setq bibtex-completion-additional-search-fields '(keywords))
+
+;; ============================================================================
+;; Time-stamp
+;; ============================================================================
+
+(add-hook 'before-save-hook 'time-stamp)
+
+;; The time stamp must be in the first eight lines of the file, and you should insert it like this: Time-stamp: <> or like this: Time-stamp: " "
+
+;; ============================================================================
+;;
+;; ============================================================================
+
+;; (setq coq-token-symbol-map
+;;     '(("alpha" "α") ("beta" "β") ("gamma" "γ") ("delta" "δ") ("epsilon" "ε")
+;;      ("zeta" "ζ") ("eta" "η") ("theta" "θ") ("iota" "ι") ("kappa" "κ")
+;;      ("lambda" "λ") ("mu" "μ") ("nu" "ν") ("xi" "ξ") ("pi" "π")
+;;      ("rho" "ρ") ("sigma" "σ")  ("tau" "τ") ("upsilon" "υ") ("phi" "ϕ")
+;;      ("chi" "χ") ("psi" "ψ") ("omega" "ω") ("Gamma" "Γ") ("Delta" "Δ")
+;;      ("Theta" "Θ") ("Lambda" "Λ") ("Xi" "Ξ") ("Pi" "Π") ("Sigma" "Σ")
+;;      ("Upsilon" "Υ") ("Phi" "Φ") ("Psi" "Ψ") ("Omega" "Ω") ("forall" "∀")
+;;      ("exists" "∃") ("nat" "ℕ" type) ("complex" "ℂ" type) ("real" "ℝ" type) ("int" "ℤ" type)
+;;      ("Z" "ℤ" type) ("rat" "ℚ" type) ("bool" "𝔹" type) ("false" "false" bold sans) ("true" "true" bold sans)
+;;      ("WHILE" "WHILE" bold sans)
+;;      ("DO" "DO" bold sans)
+;;      ("END" "END" bold sans)
+;;      ("SKIP" "SKIP" bold sans)
+;;      ("THEN" "THEN" bold sans)
+;;      ("ELSE" "ELSE" bold sans)
+;;      ("IFB" "IFB" bold sans)
+;;      ("FI" "FI" bold sans)
+;;      ("{{" "⦃" bold)
+;;      ("}}" "⦄" bold)
+;;      ("lhd" "⊲")
+;;      ("rhd" "⊳")
+;;      ("<=" "≤")
+;;      (">=" "≥")
+;;      ("=>" "⇒")
+;;      ("->" "→")
+;;      ("<-" "←")
+;;      ("<->" "↔")
+;;      ("++" "⧺")
+;;      ("<<" "《")
+;;      (">>" "》")
+;;      ("===" "≡")
+;;      ("=/=" "≢")
+;;      ("=~=" "≅")
+;;      ("==b" "≡")
+;;      ("<>b" "≢")
+;;      ("-->" "⟹-")
+;;      ("++>" "⟹+")
+;;      ("==>" "⟹")
+;;      (":=" "≔")
+;;      ("|-" "⊢")
+;;      ("<>" "≠")
+;;      ("-|" "⊣")
+;;      ("\\/" "∨")
+;;      ("/\\" "∧")
+;;      ("~" "¬")
+;;      ("UU" "𝒰")
+;;      ("============================" "⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯" bold tactical)))
+
+;; ============================================================================
+;; Reuse the current dired buffer to visit a directory
+;; ============================================================================
+
+(require 'dired-single)
+
+;; ============================================================================
+;; Use dired as a launcher
+;; ============================================================================
+
+(require 'dired-launch)
+
+;; ============================================================================
+;; Turning off backup and autosave
+;; ============================================================================
+
+(setq make-backup-files nil)
+
+;; disable #auto-save#
+(setq auto-save-default nil)
+
+;; ============================================================================
+;; disable vertical scroll bar
+;; ============================================================================
+
+(setq scroll-bar-mode nil)
+
+;; ============================================================================
+;; aggressive-indent-mode
+;; ============================================================================
+
+;; activate with
+
+;;     (add-hook 'emacs-lisp-mode-hook #'aggressive-indent-mode)
+;;     (add-hook 'css-mode-hook #'aggressive-indent-mode)
+
+;; if you want to turn it on for every programming mode,
+;; you can do something like:
+
+;;     (global-aggressive-indent-mode 1)
+;;     (add-to-list 'aggressive-indent-excluded-modes 'html-mode)
+
+;; ============================================================================
+;; unmount /dev/disk4
+;; ============================================================================
+
+
+(defun unmount-disk4 ()
+  "macOS: unmount /dev/disk4."
+  (interactive)
+  (shell-command "diskutil unmountdisk /dev/disk4"))

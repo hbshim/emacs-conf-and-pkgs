@@ -2,7 +2,57 @@
 ;;; This format is meant to be slightly human-readable;
 ;;; nevertheless, you probably don't want to edit it.
 ;;; -*- End Of Bookmark File Format Version Stamp -*-
-(("Pregnancy"
+(("Homebrew/Library/Taps"
+ (filename . "/usr/local/Homebrew/Library/Taps/")
+ (front-context-string . "homebrew\n  drwxr")
+ (rear-context-string . "2B Jul  9  2019 ")
+ (position . 134))
+("emacs26.3_elisp_sources"
+ (filename . "/usr/local/Cellar/emacs-mac/emacs-26.3-z-mac-7.7/share/emacs/26.3/lisp/")
+ (front-context-string . "abbrev.el.gz\n  -")
+ (rear-context-string . "2K Aug 28  2019 ")
+ (position . 297))
+(".emacs.d"
+ (filename . "~/.emacs.d/")
+ (front-context-string . "  /Users/hbshim/")
+ (rear-context-string)
+ (position . 1))
+("diary"
+ (filename . "~/.emacs.d/diary")
+ (front-context-string . "* Sunrise/Sunset")
+ (rear-context-string)
+ (position . 1))
+("auctex.org"
+ (filename . "~/math/auctex.org")
+ (front-context-string . "#+Time-stamp: \"2")
+ (rear-context-string)
+ (position . 1))
+("orgmode.org"
+ (filename . "~/math/orgmode.org")
+ (front-context-string . "#+Time-stamp: \"2")
+ (rear-context-string)
+ (position . 1))
+("SeagateBackupPlus"
+ (filename . "/Volumes/SeagateBackupPlus/")
+ (front-context-string . ".DocumentRevisio")
+ (rear-context-string . "6B Oct 29 15:39 ")
+ (position . 140))
+("elisp.org"
+ (filename . "~/Dropbox/Workspace/Math/elisp.org")
+ (front-context-string . "#+Time-stamp: \"2")
+ (rear-context-string)
+ (position . 1))
+("ScanSnapHome"
+ (filename . "~/Dropbox/hbshim/Documents/ScanSnapHome.localized/")
+ (front-context-string . ".Trash\n  drwxrwx")
+ (rear-context-string . "0B Oct 27 22:55 ")
+ (position . 165))
+("coq.org"
+ (filename . "~/Dropbox/Workspace/Math/coq.org")
+ (front-context-string . "#+TITLE: Coq\n#+A")
+ (rear-context-string)
+ (position . 1))
+("Pregnancy"
  (filename . "~/Dropbox/Pregnancy/")
  (front-context-string . "ER_Abongton Hosp")
  (rear-context-string . "6M Oct 25 15:28 ")
@@ -85,11 +135,6 @@
 ("Downloads"
  (filename . "~/Dropbox/hbshim/Downloads/")
  (front-context-string . "  /Users/hbshim/")
- (rear-context-string)
- (position . 1))
-("org.org"
- (filename . "~/math/org.org")
- (front-context-string . "#+TITLE: My Org ")
  (rear-context-string)
  (position . 1))
 ("macos_programming.org"

@@ -1,4 +1,4 @@
-;; Time-stamp: "2020-10-29 15:55:36"
+;; Time-stamp: "2020-11-03 21:30:56 hbshim"
 (require 'package)
 (let* ((no-ssl (and (memq system-type '(windows-nt ms-dos))
                     (not (gnutls-available-p))))
@@ -84,7 +84,7 @@
  '(beacon-color "#c82829")
  '(bibtex-completion-bibliography (quote ("~/Dropbox/Workspace/Math/mathreferences.bib")))
  '(bibtex-completion-find-additional-pdfs t)
- '(bibtex-completion-library-path (quote ("~/Documents/bibtex-library")))
+ '(bibtex-completion-library-path (quote ("~/Dropbox/hbshim/Documents/bibtex-library")))
  '(bibtex-completion-notes-path "~/Documents/bibtex-library.org")
  '(bibtex-completion-pdf-open-function (quote helm-open-file-with-default-tool))
  '(blink-matching-delay 0)
@@ -130,11 +130,14 @@
  '(mac-pass-command-to-system nil)
  '(magit-diff-use-overlays nil)
  '(mail-from-style nil)
- '(mode-line-format
+ '(mouse-avoidance-banish-position
    (quote
-    ("%e" mode-line-front-space mode-line-mule-info mode-line-client mode-line-modified mode-line-remote mode-line-frame-identification "   " mode-line-position
-     (vc-mode vc-mode)
-     "  " mode-line-modes mode-line-misc-info mode-line-end-spaces)))
+    ((frame-or-window . frame)
+     (side . right)
+     (side-pos . -3)
+     (top-or-bottom . top)
+     (top-or-bottom-pos . 0))))
+ '(mouse-avoidance-mode (quote banish) nil (avoid))
  '(nrepl-message-colors
    (quote
     ("#336c6c" "#205070" "#0f2050" "#806080" "#401440" "#6c1f1c" "#6b400c" "#23733c")))
@@ -150,7 +153,7 @@
  '(org-use-sub-superscripts (quote {}))
  '(package-selected-packages
    (quote
-    (aggressive-indent dired-single dired-launch adaptive-wrap ox-rst helm-dired-history magithub htmlize proof-general latex-math-preview auto-complete helm-bibtex helm-fuzzier helm-flx helm)))
+    (use-package sublimity aggressive-indent dired-single dired-launch adaptive-wrap ox-rst helm-dired-history magithub htmlize proof-general latex-math-preview auto-complete helm-bibtex helm-fuzzier helm-flx helm)))
  '(pdf-view-midnight-colors (quote ("#232333" . "#c7c7c7")))
  '(preview-auto-cache-preamble t)
  '(preview-auto-reveal nil)
@@ -161,38 +164,12 @@
    (quote
     ("\\RequirePackage["
      ("," . preview-default-option-list)
-     "]{preview}[2004/11/05]" "\\PreviewMacro*\\parbox{}" "\\PreviewMacro*\\hltn")))
+     "]{preview}[2004/11/05]" "\\PreviewMacro*\\parbox{}" "\\PreviewMacro*\\hltn" "\\PreviewMacro*\\phantom")))
  '(preview-gs-command "/usr/local/bin/gs")
  '(preview-scale-function 1.0)
  '(proof-three-window-enable t)
  '(proof-three-window-mode-policy (quote vertical))
  '(proof-tree-arguments (quote ("-debug")))
- '(reftex-insert-label-flags (quote (" " "sftienN")))
- '(reftex-plug-into-AUCTeX t)
- '(reftex-ref-macro-prompt nil)
- '(reftex-ref-style-alist
-   (quote
-    (("Default" t
-      (("\\ttref" 116)
-       ("\\ref" 13)
-       ("\\pageref" 112)))
-     ("Varioref" "varioref"
-      (("\\vref" 118)
-       ("\\vpageref" 103)
-       ("\\Vref" 86)
-       ("\\Ref" 82)))
-     ("Fancyref" "fancyref"
-      (("\\fref" 102)
-       ("\\Fref" 70)))
-     ("Hyperref" "hyperref"
-      (("\\autoref" 97)
-       ("\\autopageref" 117)))
-     ("Cleveref" "cleveref"
-      (("\\cref" 99)
-       ("\\Cref" 67)
-       ("\\cpageref" 100)
-       ("\\Cpageref" 68))))))
- '(reftex-section-prefixes (quote ((0 . "") (1 . "") (t . ""))))
  '(safe-local-variable-values
    (quote
     ((eval add-hook
@@ -211,13 +188,10 @@
             (quote coq-prog-name))
            (setq coq-prog-name
                  (expand-file-name "../hoqtop"))))))
- '(scroll-bar-mode nil)
  '(show-paren-delay 0)
  '(show-paren-mode t)
  '(show-paren-when-point-inside-paren t)
- '(size-indication-mode t)
  '(sp-show-pair-delay 0)
- '(time-stamp-format "%:y-%02m-%02d %02H:%02M:%02S")
  '(tool-bar-mode nil)
  '(uniquify-buffer-name-style nil nil (uniquify))
  '(utop-command "opam config exec -- utop -emacs" nil nil "https://github.com/ocaml-community/utop")
@@ -252,48 +226,259 @@
  ;; If there is more than one, they won't work right.
  '(default ((t (:inherit nil :stipple nil :background "mac:textBackgroundColor" :foreground "mac:textColor" :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 131 :width normal :foundry "nil" :family "DejaVu Sans Mono")))))
 
-;; -------------------------------------------------
-;;                     helm(-*)
-;; -------------------------------------------------
-;; https://github.com/emacs-helm/helm/wiki#configure
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;                                                                           ;;
+;;                   AUTO GENERATED SETTINGS END HERE                        ;;
+;;                                                                           ;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+;; ============================================================================
+;; emacs
+;; ============================================================================
+
+;; Tell emacs where is your personal elisp library directory
+(add-to-list 'load-path "~/.emacs.d/lisp/")
+
+(show-paren-mode 1)
+;;(setq show-paren-delay 0)
+
+;; Name of default directory of current buffer.
+;; https://stackoverflow.com/questions/6464003/emacs-find-file-default-path
+;; `default-directory' is a local variable; global value is nil
+;; Automatically becomes permanently buffer-local when set.
+;;(setq default-directory "~")
+
+;; Initialize environment from the user’s shell.
+;;(exec-path-from-shell-initialize)
+
+
+;;                             MAC SPECIFICS
+
+;; Tweak for problem on OS X where Emacs.app doesn't run the right shell init
+;; scripts when invoking a sub-shell
+;; obtained from "https://dev.realworldocaml.org/install.html"
+(cond ((eq window-system 'ns) ; macosx
+       ;; Invoke login shells, so that .profile or .bash_profile is read
+       (setq shell-command-switch "-lc")))
+
+;; set keys for Apple keyboard, for emacs in OS X
+;; lower case "s" is for super-key (control)
+(setq mac-command-modifier 'control) ; make cmd key do ~
+(setq mac-option-modifier 'meta) ; make opt key do ~
+(setq mac-control-modifier 'super) ; make Control key do ~
+(setq ns-function-modifier 'hyper)  ; make Fn key do ~
+
+
+;; ============================================================================
+;;                                  helm
+;; ============================================================================
+
 (require 'helm-config)
 (global-set-key (kbd "M-x") 'helm-M-x)
-;; https://github.com/emacs-helm/helm/wiki#helm-mode
 (global-set-key (kbd "C-x r b") 'helm-filtered-bookmarks)
 (global-set-key (kbd "C-x C-f") 'helm-find-files)
 (global-set-key (kbd "C-x C-b") 'helm-buffers-list)
+
+;; Do not `(setq helm-mode 1)'. It is not the same as below and sometimes make
+;; helm does not work - eg. `describe-variable' and `describe-function'
 (helm-mode 1)
-;; https://github.com/PythonNut/helm-flx
+
+;; enable helm fuzzy sorting. Do not set `(setq helm-flx-mode +1)'
 (helm-flx-mode +1)
-;; set t for helm-flx-for-helm-find-files, helf-flx-for-helm-locate
-;; https://github.com/EphramPerdition/helm-fuzzier
+
+;; more intuitive fuzzy matching behavior for Helm. Combine with `helm-flx'
+;; for query highlighting and sorting results by quality
 (require 'helm-fuzzier)
 (helm-fuzzier-mode 1)
-;; helm-fuzzier will only enhance matching for sources that have fuzzy-matching enabled, so be sure to enable fuzzy-matching for the sources you're interested in by setting the appropriate variable (helm-M-x-fuzzy-match, helm-mode-fuzzy-match, helm-apropos-fuzzy-match, etc').
+;; helm-fuzzier will only enhance matching for sources that have fuzzy-matching enabled, so be sure to enable fuzzy-matching for the sources you're interested in by setting the appropriate variable (`helm-M-x-fuzzy-match', `helm-mode-fuzzy-match', `helm-apropos-fuzzy-match', etc).
 
-;; ------------------------------------------------
-;;           AUCTex/LaTeX/Preview Latex
-;; ------------------------------------------------
-;; https://www.emacswiki.org/emacs/AUCTeX
+;; ============================================================================
+;;                                 AUCTeX
+;; ============================================================================
+
+;; Automatically save style information when saving the buffer.
 ;;(setq TeX-auto-save t)
+
+;; Parse file after loading it if no style hook is found for it.
 ;;(setq TeX-parse-self t)
+
+;; The master file associated with the current buffer.
+;; If this variable is nil, AUCTeX will query you for the name.
+;; If the variable is t, AUCTeX will assume the file is a master file itself.
 ;;(setq-default TeX-master nil)
-;; the following hooks can be customized by a variable `latex-mode-hook'
+
 (add-hook 'LaTeX-mode-hook 'visual-line-mode)
 (add-hook 'LaTeX-mode-hook 'flyspell-mode)
+;; `LaTeX-math-mode' is a minor mode with easy access to TeX math macros.
 (add-hook 'LaTeX-mode-hook 'LaTeX-math-mode)
-(add-hook 'LaTeX-mode-hook 'turn-on-reftex)   ; with AUCTeX LaTeX mode
-;;(add-hook 'latex-mode-hook 'turn-on-reftex)   ; with Emacs latex mode
-(add-hook 'LaTeX-mode-hook 'TeX-fold-mode)   ; with AUCTeX LaTeX mode
-;;(add-hook 'latex-mode-hook 'tex-fold-mode)   ; with Emacs latex mode
-;;(add-hook 'LaTeX-mode-hook 'outline-minor-mode)
+;; (add-hook 'LaTeX-mode-hook 'TeX-fold-mode)
+;; (add-hook 'LaTeX-mode-hook 'outline-minor-mode)
 ;; Starts the Emacs server for backward-sync
+;; `exec-path-from-shell-initialize' initialize env from the user’s shell.
 (add-hook 'LaTeX-mode-hook 'exec-path-from-shell-initialize)
 (add-hook 'LaTeX-mode-hook 'abbrev-mode)
 
+;; List of hooks to run when a new section is inserted.
+(setq LaTeX-section-hook
+      '(LaTeX-section-heading  ; ask to choose chapter/section/subsection/...
+        LaTeX-section-title    ; ask to enter insert title
+     ;; LaTeX-section-toc      ; ask to enter toc entry
+        LaTeX-section-section  ; Insert LaTeX section command according to
+                               ; to ‘name’, ‘title’, and ‘toc’.
+     ;; LaTeX-section-label    ; insert a label controlled by the variable
+                               ; LaTeX-section-label
+        ))
 
-;; ------------------------ TEX-FOLD-MODE ------------------------
-;; The following fixes TeX-fold-buffer's problem with arbitrary insertion of visual newlines
+;;                       LABEL INSERTING FUNCTION
+
+;; A function inserting a label at point or returning a label string.
+;; Sole mandatory argument of the function (that I made optional)is
+;; the environment. The function has to return
+;; + the label inserted, or
+;; + nil if no label was inserted.
+;; If the argument `no-insert' is non-nil, then the function has to return
+;; + the label as string without any insertion or
+;; + nil if no label was read in.
+;; See the description of the function `LaTeX-label-function'.
+(defun my-LaTeX-label (&optional name type no-insert)
+  "Insert automatically generated label without asking the label name. 
+This will be used for AUCTeX `LaTeX-label-function' variable."
+  (let ((listOfLetters "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ")
+        (timeStamp (string-to-number (reverse (number-to-string (- (string-to-number (format-time-string "%s")) (* 60 60 24 365 50))))))
+        (label ""))
+    (while (not (= timeStamp 0))
+      (let ((i (mod timeStamp (length listOfLetters))))
+        (setq label (concat label (substring listOfLetters i (1+ i))))
+        (setq timeStamp (truncate (/ timeStamp (length listOfLetters))))))
+    (while (not (= (length label) 6))
+      (setq label (concat "0" label)))
+    (unless no-insert
+      (delete-blank-lines)
+      (previous-line)
+      (end-of-line)
+      (insert " ")
+      (insert TeX-esc "label" TeX-grop label TeX-grcl))
+    label))
+(setq LaTeX-label-function 'my-LaTeX-label)
+
+
+;;                         LOCATION OF TEX MACROS
+;;            (Used by AUCTeX to generate AUCTeX style files)
+
+;; (setq `TeX-macro-global'
+;;       '("/Users/hbshim/.local/texlive/2019/texmf-var/tex/"
+;;         "/Users/hbshim/.local/texlive/2019/texmf-dist/tex/"
+;;         "/Users/hbshim/.local/texlive/2019/texmf-dist/bibtex/bst/"
+;;         "/Users/hbshim/.local/texlive/texmf-local/tex/"
+;;         "/Users/hbshim/.local/texlive/texmf-local/bibtex/bst/"))
+
+;; The value defaults to the directories listed in the ‘TEXINPUTS’ and
+;; ‘BIBINPUTS’ environment variables or to the respective directories in
+;; $TEXMFHOME if no results can be obtained from the environment variables.
+;; (setq `TeX-macro-private'
+;;       '("/Users/hbshim/.emacs.d/elpa/auctex-12.2.3/latex/"))
+
+
+;;                      AUCTEX STYLE FILES LOCATIONS
+;;          (Warning: those are not LaTeX style files, `*.sty'!)
+
+;; GLOBAL (SITE-WISE)
+
+;; automatically generated
+;; (setq `TeX-auto-global' "/usr/local/var/auctex")
+
+;; manually written
+;; (setq `TeX-style-global' "/Users/hbshim/.emacs.d/elpa/auctex-12.2.3/style")
+;; Directory containing hand generated TeX information.
+;; These correspond to 
+
+;; PRIVATE (USER-WISE)
+
+;; automatically generated
+;; (setq `TeX-auto-private' ("/Users/hbshim/.emacs.d/auctex/auto"))
+;; List of directories containing automatically generated AUCTeX style files.
+;; These correspond to the personal TeX macros. 
+
+;; manually written
+;; (setq `TeX-style-private' '("/Users/hbshim/.emacs.d/auctex/style"))
+;; List of directories containing hand generated AUCTeX style files.
+;; These correspond to the personal TeX macros.
+
+;; LOCAL (FILE-WISE, PER DIRECTORY)
+
+;; manually written
+;; (setq `TeX-style-local' "style")
+
+;; automatically generated
+;; (setq `TeX-auto-local' "auto")
+
+;; ALL LOCATIONS
+
+;; List of directories to search for AUCTeX style files. 
+;; + By default, when AUCTeX searches a directory for files, it will recursively
+;;   search through subdirectories. Controlled by `TeX-file-recurse' variable.
+;; + Per default the list is built from the values of the variables
+;; ‘TeX-auto-global’, ‘TeX-style-global’, ‘TeX-auto-private’,
+;; ‘TeX-style-private’, ‘TeX-auto-local’, and ‘TeX-style-local’.
+;; (setq `TeX-style-path'
+;;       '("/usr/local/var/auctex"
+;;         "~/.emacs.d/elpa/auctex-12.2.3/style"
+;;         "~/.emacs.d/auctex/auto"
+;;         "~/.emacs.d/auctex/style"
+;;         "~/math/AUCTeX_auto_gen_styles"
+;;         "~/math/AUCTeX_user_def_style"))
+
+
+;;                            RECURSIVE SEARCH
+
+;; The value
+;; + nil means do not recurse,
+;; + a positive integer means go that far deep in the directory hierarchy,
+;; + t means recurse indefinitely.
+;; (setq `TeX-file-recurse' t)
+
+
+;;                          FILE NAMES TO IGNORE
+
+;; These files or directories will not be considered when searching for
+;; TeX files in a directory.
+;; (setq `TeX-ignore-file' "\\(^\\|[/\\]\\)\\(\\.\\|\\.\\.\\|RCS\\|SCCS\\|CVS\\|babel\\..*\\)$")
+
+
+;;                   SYMBOLS TO IGNORE FOR AUTOMATION
+
+;; List of symbols to ignore when scanning a TeX style file.
+;; (setq `TeX-auto-ignore'
+;;       '("csname"
+;;         "filedate"
+;;         "fileversion"
+;;         "docdate"
+;;         "next"
+;;         "labelitemi"
+;;         "labelitemii"
+;;         "labelitemiii"
+;;         "labelitemiv"
+;;         "labelitemv"
+;;         "labelenumi"
+;;         "labelenumii"
+;;         "labelenumiii"
+;;         "labelenumiv"
+;;         "labelenumv"
+;;         "theenumi"
+;;         "theenumii"
+;;         "theenumiii"
+;;         "theenumiv"
+;;         "theenumv"
+;;         "document"
+;;         "par"
+;;         "do"
+;;         "expandafter"))
+
+
+;;                            TEX FOLD MODE
+
+;; The following fixes TeX-fold-buffer's problem with arbitrary insertion of
+;; visual newlines
 ;; https://emacs.stackexchange.com/questions/42147/tex-folding-creates-visual-newlines-auctex
 (with-eval-after-load "tex-fold"
   (defun TeX-fold-overfull-p (ov-start ov-end display-string)
@@ -314,138 +499,129 @@
               ov-end))
         (current-fill-column)))))
 
-;; ------------------------ Skim forward search  ------------------------
+
+;;                         'SKIM' BACKWARD SEARCH
+
 ;;https://sourceforge.net/p/skim-app/wiki/TeX_and_PDF_Synchronization/#choosing-an-editor-command-for-backward-search
+;; 'tex-site.el' contains startup code, autoloads and variables adapted to
+;; the local site configuration. Editing the file should not be done
+;; because the installation routine will overwrite those changes.
 ;; The following only works with AUCTeX loaded
 (require 'tex-site)
 (add-hook 'TeX-mode-hook
           (lambda ()
             (add-to-list 'TeX-output-view-style '("^pdf$" "." "/Applications/Skim.app/Contents/SharedSupport/displayline %n %o %b"))))
 
-;; ------------------------ AUCTeX my keybinding  ------------------------
 
-(global-set-key (kbd "C-S-t")  (lambda ()
-                                 (interactive)
-                                 (search-forward-regexp
-                                  "\\$\\|\\\\end{equation\\*}\\|\\\\end{align\\*}")
-                                 (preview-at-point)
-                                 (TeX-fold-buffer)
-                                 ))
-(global-set-key (kbd "M-S-t")  (lambda ()
-                                 (interactive)
-                                 (save-buffer)
-                                 (TeX-command-master LaTeX)))
+;; ============================================================================
+;;                                 reftex
+;; ============================================================================
 
-(global-set-key (kbd "C-c 0")  (lambda ()
-                                 (interactive)
-                                 (reftex-reference " ")))
+(add-hook 'LaTeX-mode-hook 'turn-on-reftex)
 
-(global-set-key (kbd "C-c C-j")  (lambda ()
-                                 (interactive)
-                                 (LaTeX-insert-item)
-                                 (my-insert-label)
-                                 (TeX-fold-buffer)))
+(add-hook 'reftex-mode-hook
+          (lambda ()
+            (define-key reftex-mode-map "\C-c&" nil)
+            (define-key reftex-mode-map "\C-c(" 'my-LaTeX-label)))
 
-(global-set-key (kbd "C-c C-S-m")  (lambda ()
-                                 (interactive)
-                                 (helm-insert-latex-math)))
-;; ---------------------------------------------------
-;;           setting load-path
-;; ---------------------------------------------------
-;; https://www.emacswiki.org/emacs/LoadPath
-;; Tell emacs where is your personal elisp lib dir
-(add-to-list 'load-path "~/.emacs.d/lisp/")
+;; Alist with default regular expressions for finding context.
+;; (setq reftex-default-context-regexps nil)
 
-;; -----------------------------------------------
-;;           show paren mode
-;; -----------------------------------------------
-;; https://www.emacswiki.org/emacs/ShowParenMode
-(show-paren-mode 1)
-;;(setq show-paren-delay 0)
+;; Default label alist specifications.  LaTeX should always be the last entry.
+;; The value of this variable is a list of symbols with associations in the
+;; constant reftex-label-alist-builtin’
+;; (setq reftex-default-label-alist-entries nil)
 
-;; ------------------------------------------------------------
-;;                     “Find File:” default path
-;; ------------------------------------------------------------
-;; https://stackoverflow.com/questions/6464003/emacs-find-file-default-path
-;;(setq default-directory "~")
+;; RefTeX will try to derive a sensible label from context.
+;; (setq reftex-insert-label-flags (quote (" " "sftienN")))
+
+;; List of macros and environments to be ignored when searching for labels.
+;; (setq reftex-label-ignored-macros-and-environments (quote ("label"))
+
+;; List of regexps matching \label definitions.
+;; (setq reftex-label-regexps (quote ("")))
+
+;; Plug-in flags for AUCTeX interface.
+;; (setq reftex-plug-into-AUCTeX t)
+
+;; If non-nil, it will prompts for the reference macro.
+;; (setq reftex-ref-macro-prompt nil)
+
+;; Alist of reference styles.
+;; (setq reftex-ref-style-alist nil)
+
+;; Prefixes for section labels.
+;; (setq reftex-section-prefixes nil)
 
 
-;; ------------------------------------------------------------
-;;                  my scripts
-;; ------------------------------------------------------------
+;;                                 FRAME
 
-;; -- Tweaks for OS X -------------------------------------
-;; Tweak for problem on OS X where Emacs.app doesn't run the right
-;; init scripts when invoking a sub-shell
-;; obtained from "https://dev.realworldocaml.org/install.html"
-(cond ((eq window-system 'ns) ; macosx
-       ;; Invoke login shells, so that .profile or .bash_profile is read
-       (setq shell-command-switch "-lc")))
-;; I additionally added:
-;;(exec-path-from-shell-initialize)
-
-;; set keys for Apple keyboard, for emacs in OS X
-;; lower case "s" is for super-key
-(setq mac-command-modifier 'control) ; make cmd key do ~
-(setq mac-option-modifier 'meta) ; make opt key do ~
-(setq mac-control-modifier 'super) ; make Control key do ~
-(setq ns-function-modifier 'hyper)  ; make Fn key do ~
-;; key-binding
 (global-set-key (kbd "C-S-<return>")
                 (lambda ()
                   (interactive)
-                  (add-hook 'after-make-frame-functions 'select-frame-set-input-focus)
+                  (add-hook 'after-make-frame-functions
+                            'select-frame-set-input-focus)
                   (make-frame)
-                  (remove-hook 'after-make-frame-functions 'select-frame-set-input-focus)
+                  (remove-hook 'after-make-frame-functions
+                               'select-frame-set-input-focus)
                   (switch-to-buffer "*scratch*")
                   ))
+
+(global-set-key (kbd "s-c") 'delete-frame)
+
+(global-set-key (kbd "s-j") 'other-frame)
+
+(global-set-key (kbd "s-J")
+                (lambda ()
+                  (interactive)
+                  (other-frame -1)))
+
+(global-set-key (kbd "s-k")
+                (lambda ()
+                  (interactive)
+                  (other-frame -1)))
+;; note that (global-set-key (kbd "s-k") '(other-frame -1)) does not work
+;; because other-frame is an interactive function
+
+;;                                  INFO
+
 (global-set-key (kbd "C-h i")
                 (lambda ()
                   (interactive)
-                  (add-hook 'after-make-frame-functions 'select-frame-set-input-focus)
+                  (add-hook 'after-make-frame-functions
+                            'select-frame-set-input-focus)
                   (make-frame)
-                  (remove-hook 'after-make-frame-functions 'select-frame-set-input-focus)
-                  (info)))
+                  (remove-hook 'after-make-frame-functions
+                               'select-frame-set-input-focus)
+                  (info)
+                  (toggle-easy-reading)))
+
+(lambda ()
+                  (interactive)
+                  (add-hook 'after-make-frame-functions
+                            'select-frame-set-input-focus)
+                  (make-frame)
+                  (remove-hook 'after-make-frame-functions
+                               'select-frame-set-input-focus)
+                  (info)
+                  (toggle-easy-reading))
+
+;;                                 BIBTEX
+
 (global-set-key (kbd "C-c C-S-b") 'helm-bibtex)
+
+
+;;                               SCROLLING
+
 (global-set-key (kbd "C-x <") 'scroll-right)
 (global-set-key (kbd "C-x >") 'scroll-left)
+
+
+;;                            LINE TRUNCATION
+
+;; When truncating is off, long lines are folded.
 (global-set-key (kbd "C-x ?") 'toggle-truncate-lines)
-(global-set-key (kbd "s-C") 'delete-frame)
-;; (global-set-key (kbd "s-j") 'other-frame)
-;; (global-set-key (kbd "s-k")
-;;                 (lambda ()
-;;                   (interactive)
-;;                   (other-frame -1)))
 
-;; my (unique) tag-generation and its inserting functions
-(defun my-generate-label ()
-  (interactive)
-  (let ((listOfLetters "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ")
-        (timeStamp (string-to-number (format-time-string "%S%M%H%d%m%y")))
-        (result ""))
-    (while (not (= timeStamp 0))
-      (let ((i (mod timeStamp (length listOfLetters))))
-        (setq result (concat result (substring listOfLetters i (1+ i))))
-        (setq timeStamp (truncate (/ timeStamp (length listOfLetters))))))
-    ;;  (insert (concat (concat "\\mylabel{" result) "}"))))
-    (insert result)))
-;;(global-set-key (kbd "C-c C-t C-t") 'my-generate-label)
-;;(global-set-key (kbd "C-c C-t C-t") 'my-insert-label)
-
-(defun my-insert-label ()
-  (interactive)
-  (let ((listOfLetters "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ")
-        (timeStamp (string-to-number (format-time-string "%S%M%H%d%m%y")))
-        (result ""))
-    (while (not (= timeStamp 0))
-      (let ((i (mod timeStamp (length listOfLetters))))
-        (setq result (concat result (substring listOfLetters i (1+ i))))
-        (setq timeStamp (truncate (/ timeStamp (length listOfLetters))))))
-    (insert (concat (concat "\\label{" result) "}")))
-  (TeX-fold-region))
-;;(insert result)))
-;;(global-set-key (kbd "C-c C-t C-t") 'my-generate-label)
-(global-set-key (kbd "C-c 9") 'my-insert-label)
 
 ;; frame/window resize keys ----------------------------------
 ;; From "https://www.emacswiki.org/emacs/frame-cmds.el"
@@ -590,32 +766,48 @@ This represents the currently available screen area."
                   (resize-frame-80x24)
                   (ansi-term "/bin/bash")))
 
-;; the following is obtained from
-;; https://oremacs.com/2015/01/01/three-ansi-term-tips/
-;; and modified
 
+;;         KILL THE BUFFER AND FRAME WHEN THE TERMINAL TERMINATES
+
+;; https://oremacs.com/2015/01/01/three-ansi-term-tips/
 (defun my-term-exec-hook ()
   (let* ((buff (current-buffer))
          (proc (get-buffer-process buff)))
     (set-process-sentinel proc
      `(lambda (process event)
-        (if (string= event "finished\n")
+        (if (or (string-match-p (regexp-quote "finished") event)
+                (string-match-p (regexp-quote "deleted") event)
+                (string-match-p (regexp-quote "exited") event)
+                (string-match-p (regexp-quote "failed") event))
+            ;; (string= event "finished\n")
             (progn (delete-frame (selected-frame)) (kill-buffer ,buff)))))))
-
 (add-hook 'term-exec-hook 'my-term-exec-hook)
 
-;; start emacs server ------------------------------------------
+
+;;                           START EMACS SERVER
+
 (server-start)
 
-;; -------------------------------------------------------------
-;; automatically generated and inserted but not by customization
-;; -------------------------------------------------------------
 
+;;               SELECT-WINDOW WHEN A NEW WINDOW POPPED UP
+
+;;(setq-defulat 'split-window-preferred-function 'split-window-sensibly)
+(setq split-window-preferred-function
+      '(lambda (&optional window)
+         (let ((new-window (split-window-sensibly window)))
+                    (if (not (active-minibuffer-window))
+                        (select-window new-window)))))
+
+
+;; AUTOMATICALLY GENERATED TO ENABLE FEATURES
+
+;; 'put' puts value onto symbol’s property list under the property name property, replacing any previous property value. The put function returns value. 
 (put 'upcase-region 'disabled nil)
 (put 'downcase-region 'disabled nil)
 (put 'scroll-left 'disabled nil)
 
-;; delete trailing whitespaces before saving ---------------------------------
+
+;;
 ;; (I had to disable this because it makes saving too much slower than necessary.)
 ;;(add-hook 'before-save-hook 'delete-trailing-whitespace)
 
@@ -715,7 +907,6 @@ Version 2020-03-05"
 (eval-after-load 'dired
                     '(define-key dired-mode-map (kbd "<return>") 'dired-open-in-external-app))
 
-(setq frame-title-format "%b")
 
 ;; this makes typing a keyboard deletes selected region
 ;; https://www.gnu.org/software/emacs/manual/html_node/emacs/Saving-Emacs-Sessions.html
@@ -723,20 +914,229 @@ Version 2020-03-05"
 ;; https://www.emacswiki.org/emacs/Desktop
 (delete-selection-mode 1)
 
-;; app frame title bar format
+;; ============================================================================
+;; Title bar, mode line, mode bar
+;; ============================================================================
+
+(setq mode-line-format
+      '("%e"
+        mode-line-front-space
+        mode-line-mule-info
+        mode-line-client
+        mode-line-modified
+        mode-line-remote
+        ; mode-line-frame-identification
+        "   "
+        mode-line-position
+        ; (vc-mode vc-mode)
+        "  "
+        mode-line-modes
+        mode-line-misc-info
+        mode-line-end-spaces))
+
+(setq size-indication-mode t)
+
 (setq frame-title-format
-      `((buffer-file-name "%f" "%b"),(format " - Emacs %s" emacs-version)))
+      '(:eval
+        (if (buffer-file-name)
+            (concat (abbreviate-file-name (buffer-file-name))
+                    (format " - Emacs %s" emacs-version))
+          (if (derived-mode-p 'dired-mode)
+              (concat default-directory (format " - Emacs %s" emacs-version))))))
+
+;; ============================================================================
+;; desktop save mode
+;; ============================================================================
 
 ;; https://www.gnu.org/software/auctex/manual/preview-latex.html#Getting-started
 ;; says that setting desktop-save-mode on preserves preview-latex files from
-;; session to session
+;; session to session but it doesn't work as expected
 ;;(desktop-save-mode 1)
+
+;; ============================================================================
+;; org mode, orgmode
+;; ============================================================================
 
 ;; automatically enable flyspell in org mode
 (add-hook 'org-mode-hook 'flyspell-mode)
 
 ;; prevent line breaking in the middle of a word in org mode
 (add-hook 'org-mode-hook 'toggle-word-wrap)
+
+;; adaptive-wrap preserving indents
+(add-hook 'org-mode-hook 'adaptive-wrap-prefix-mode)
+
+(add-hook 'org-mode-hook 'abbrev-mode)
+
+(add-hook 'org-mode-hook
+          (lambda ()
+            (define-key org-mode-map "\C-e" 'end-of-visual-line)
+            (define-key org-mode-map "\C-a" 'beginning-of-visual-line)
+            (define-key org-mode-map "\C-c[" nil)
+            (define-key org-mode-map "\C-c]" nil)))
+
+;; ============================================================================
+;; org agenda calendar holiday diary
+;; ============================================================================
+
+(global-set-key (kbd "C-c a") 'org-agenda)
+
+(setq org-log-done "time")
+
+;; (setq org-directory "~/Dropbox/org")
+
+(setq org-agenda-files '("~/org/todo.org"))
+
+(setq org-agenda-start-on-weekday 0)
+
+(setq org-agenda-include-diary t)
+
+(setq diary-file "~/.emacs.d/diary")
+;; the following may look like a duplicate but is actually necessary.
+;; eg. in the calendar mode, when pressing 'i a' to insert an anniversary,
+;; the following make it insert `org-anniversary' to the diary file that is
+;; is format free (american, european, ...) instead of format dependent
+;; `diary-anniversary'.  
+(setq org-agenda-diary-file "~/.emacs.d/diary")
+
+(setq calendar-latitude 40.2369)
+(setq calendar-longitude -75.2366)
+(setq calendar-location-name "North Wales, PA")
+;; For the Calendar sunrise/sunset
+;; Use one decimal place in the values of ‘calendar-latitude’ and
+;; ‘calendar-longitude’.
+
+;; WARNING: The following settings are used only to nullify holidays
+;;          The value of each variables are diary items not just "1" or "t"
+(setq holiday-other-holidays nil)
+(setq holiday-general-holidays nil)
+(setq holiday-local-holidays nil)
+(setq holiday-christian-holidays nil)
+(setq holiday-hebrew-holidays nil)
+(setq holiday-islamic-holidays nil)
+(setq holiday-bahai-holidays nil)
+(setq holiday-oriental-holidays nil)
+(setq holiday-solar-holidays nil)
+;; by setting any of these to nil in your init file, you can eliminate
+;; unwanted categories of holidays.
+
+;; include sunrise and sunset in the org agenda
+;; include %%(diary-sunrise) and %%(diary-sunset)
+;; in the diary file one line for each
+(defun diary-sunrise ()
+  (let ((dss (diary-sunrise-sunset)))
+    (with-temp-buffer
+      (insert dss)
+      (goto-char (point-min))
+      (while (re-search-forward " ([^)]*)" nil t)
+        (replace-match "" nil nil))
+      (goto-char (point-min))
+      (search-forward ",")
+      (buffer-substring (point-min) (match-beginning 0)))))
+
+(defun diary-sunset ()
+  (let ((dss (diary-sunrise-sunset))
+        start end)
+    (with-temp-buffer
+      (insert dss)
+      (goto-char (point-min))
+      (while (re-search-forward " ([^)]*)" nil t)
+        (replace-match "" nil nil))
+      (goto-char (point-min))
+      (search-forward ", ")
+      (setq start (match-end 0))
+      (search-forward " at")
+      (setq end (match-beginning 0))
+      (goto-char start)
+      (capitalize-word 1)
+      (buffer-substring start end))))
+
+;; (setq org-agenda-day-face-function
+;;       (defun jd:org-agenda-day-face-holidays-function (date)
+;;         "Compute DATE face for holidays."
+;;         (unless (org-agenda-todayp date)
+;;           (dolist (file (org-agenda-files nil 'ifmode))
+;;             (let ((face
+;;                    (dolist (entry (org-agenda-get-day-entries file date))
+;;                      (let ((category (with-temp-buffer
+;;                                        (insert entry)
+;;                                        (org-get-category (point-min)))))
+;;                        (when (or (string= "Holidays" category)
+;;                                  (string= "Vacation" category))
+;;                          (return 'org-agenda-date-weekend))))))
+;;               (when face (return face)))))))
+
+(add-to-list 'load-path (expand-file-name "~/.emacs.d/cal-korea-x"))
+(require 'cal-korea-x)
+;; (setq holiday-local-holidays cal-korea-x-korean-holidays)
+;; (setq diary-date-forms 'diary-american-date-forms)
+;; (setq diary-modify-entry-list-string-function 'org-modify-diary-entry-string)
+;; (setq diary-modify-entry-list-string-function 'calendar-modify-diary-entry-string)
+
+;; put holidays manually as the following
+(setq calendar-holidays
+      '((holiday-fixed 1 1 "New Year's Day")
+        (holiday-float 1 1 3 "Martin Luther King Day")
+        (holiday-fixed 2 2 "Groundhog Day")
+        (holiday-fixed 2 14 "Valentine's Day")
+        (holiday-float 2 1 3 "President's Day")
+        (holiday-fixed 3 17 "St. Patrick's Day")
+        (holiday-fixed 4 1 "April Fools' Day")
+        (holiday-float 5 0 2 "Mother's Day")
+        (holiday-float 5 1 -1 "Memorial Day")
+        (holiday-fixed 6 14 "Flag Day")
+        (holiday-float 6 0 3 "Father's Day")
+        (holiday-fixed 7 4 "Independence Day")
+        (holiday-float 9 1 1 "Labor Day")
+        (holiday-float 10 1 2 "Columbus Day")
+        (holiday-fixed 10 31 "Halloween")
+        (holiday-fixed 11 11 "Veteran's Day")
+        (holiday-float 11 4 4 "Thanksgiving")
+        (holiday-fixed 1 1 "신정")
+        (holiday-lunar-ko 1 nil 1 "설날" -1)
+        (holiday-lunar-ko 1 nil 1 "설날")
+        (holiday-lunar-ko 1 nil 1 "설날" 1)
+        (holiday-fixed 3 1 "3.1절")
+        (holiday-lunar-ko 4 nil 8 "석가탄신일")
+        (holiday-fixed 5 5 "어린이날")
+        (holiday-fixed 6 6 "현충일")
+        (holiday-fixed 8 15 "광복절")
+        (holiday-fixed 10 3 "개천절")
+        (holiday-fixed 10 9 "한글날")
+        (holiday-lunar-ko 8 nil 15 "추석" -1)
+        (holiday-lunar-ko 8 nil 15 "추석")
+        (holiday-lunar-ko 8 nil 15 "추석" 1)
+        (holiday-fixed 12 25 "성탄절")
+        (holiday-easter-etc)
+        (holiday-solar-term-ko)
+        (holiday-fixed 12 25 "Christmas")
+        (if calendar-christian-all-holidays-flag
+            (append
+             (holiday-fixed 1 6 "Epiphany")
+             (holiday-julian 12 25 "Christmas (Julian calendar)")
+             (holiday-greek-orthodox-easter)
+             (holiday-fixed 8 15 "Assumption")
+             (holiday-advent 0 "Advent")))
+        (solar-equinoxes-solstices)
+        (holiday-sexp calendar-daylight-savings-starts
+                      (format "Daylight Saving Time Begins %s"
+                              (solar-time-string
+                               (/ calendar-daylight-savings-starts-time
+                                  (float 60))
+                               calendar-standard-time-zone-name)))
+        (holiday-sexp calendar-daylight-savings-ends
+                      (format "Daylight Saving Time Ends %s"
+                              (solar-time-string
+                               (/ calendar-daylight-savings-ends-time
+                                  (float 60))
+                               calendar-daylight-time-zone-name)))
+        (holiday-sexp '(if (zerop (% year 4))
+                   (calendar-gregorian-from-absolute
+                    (1+ (calendar-dayname-on-or-before
+                          1 (+ 6 (calendar-absolute-from-gregorian
+                                  (list 11 1 year)))))))
+              "US Presidential Election")
+        ))
 
 ;; ==========================================================================
 ;; MacOS: enable "quick look" on dired
@@ -872,11 +1272,11 @@ Version 2018-12-23"
   (define-key dired-mode-map "," 'dired))
 
 ;; ============================================================================
-;;
+;; make beginning/end of lines visual globally
 ;; ============================================================================
 
-(global-set-key (kbd "C-s-e") 'end-of-visual-line)
-(global-set-key (kbd "C-s-a") 'beginning-of-visual-line)
+(global-set-key (kbd "C-e") 'end-of-visual-line)
+(global-set-key (kbd "C-a") 'beginning-of-visual-line)
 
 ;; ============================================================================
 ;;
@@ -908,8 +1308,6 @@ Version 2018-12-23"
 
 ;(setq dired-deletion-confirmer '(lambda (x) t))
 
-(add-hook 'dired-mode-hook '(lambda () (dired-hide-details-mode 1)))
-
 (add-hook 'dired-load-hook
                (lambda ()
                  (load "dired-x")
@@ -934,8 +1332,16 @@ Version 2018-12-23"
                  ))
 (setq dired-listing-switches "-Alth")
 (setq inhibit-startup-screen nil)
+;; Dired Clean Confirm Killing Deleted Buffers 
+;; Dired Find Subdir
+(setq dired-hide-details-mode t)
+(setq dired-hide-details-hide-information-lines t)
+;;(add-hook 'dired-mode-hook '(lambda () (dired-hide-details-mode 1)))
+;; Dired Recursive Copies
+;; Dired Recursive Deletes
+(setq helm-dired-history-max 5)
 
-(define-key helm-find-files-map (kbd "C-^") 'helm-find-files-up-one-level)
+;;(define-key helm-find-files-map (kbd "C-^") 'helm-find-files-up-one-level)
 ;;(define-key helm-find-files-map (kbd "C-SPC") 'helm-execute-persistent-action)
 
 ;;mouse-autoselect-window
@@ -960,9 +1366,9 @@ Version 2018-12-23"
       (progn (text-scale-adjust 0)
              (toggle-line-spacing-nil-half)
              (set-frame-width  (selected-frame) 80))
-    (progn (text-scale-adjust 2)
+    (progn (text-scale-adjust 1)
            (toggle-line-spacing-nil-half)
-           (set-frame-width  (selected-frame) 102))))
+           (set-frame-width  (selected-frame) 100))))
 
 (when (memq window-system '(mac ns x))
   (exec-path-from-shell-initialize))
@@ -987,8 +1393,6 @@ Version 2018-12-23"
 ;; To disable VC entirely, set the customizable variable vc-handled-backends to nil.
 ;;(setq vc-handled-backends 'git)
 (put 'dired-find-alternate-file 'disabled nil)
-
-(add-hook 'org-mode-hook 'abbrev-mode)
 
 (setq vc-follow-symlinks t)
 
@@ -1111,3 +1515,47 @@ Version 2018-12-23"
   "macOS: unmount /dev/disk4."
   (interactive)
   (shell-command "diskutil unmountdisk /dev/disk4"))
+
+;; ============================================================================
+;; scrolling by line
+;; ============================================================================
+
+;;scroll window up/down by one line
+;; (global-set-key (kbd "M-n") (kbd "C-u 1 C-v"))
+;; (global-set-key (kbd "M-p") (kbd "C-u 1 M-v"))
+
+;; ============================================================================
+;; preserve cursor from scrolling
+;; ============================================================================
+
+;;keep cursor at same position when scrolling
+(setq scroll-preserve-screen-position nil)
+
+;; ============================================================================
+;; page up/down by half page instead of full
+;; ============================================================================
+
+;; (autoload 'View-scroll-half-page-forward "view")
+;; (autoload 'View-scroll-half-page-backward "view")
+;; (global-set-key (kbd "C-v") 'view-scroll-half-page-forward)
+;; (global-set-key (kbd "M-v") 'view-scroll-half-page-backward)
+
+;; ============================================================================
+;; scrolling a window when the point moves out
+;; ============================================================================
+
+(setq scroll-step 1)
+
+;; ============================================================================
+;; sublimity - smooth scrolling
+;; ============================================================================
+
+  ;; (require 'sublimity)
+(require 'sublimity-scroll)
+  ;; (require 'sublimity-map)
+
+;; ============================================================================
+;; remove all source control
+;; ============================================================================
+
+(setq vc-handled-backends ())

@@ -1,0 +1,15 @@
+%%(diary-sunrise)
+%%(diary-sunset)
+%%(org-anniversary 1978 10  7) My %d%s birthday
+%%(org-anniversary 1979  6 14) 송지영 %d%s birthday
+%%(org-anniversary 1982  5  6) 송지혜 %d%s birthday
+%%(org-anniversary 1955  4 30) 백승덕 %d%s birthday
+%%(org-anniversary 2009  4  3) 밀키 %d%s birthday
+%%(org-anniversary 1982  3 24) 심효원 %d%s birthday
+%%(org-anniversary 1949  3 12) 심재훈 %d%s birthday
+%%(org-anniversary 2007  5 12) %d%s Korean anniversary
+%%(org-anniversary 2007  5  5) %d%s American anniversary
+%%(org-anniversary 2007  11  5) %d%s American anniversary
+%%(diary-lunar-anniversary 9 28 nil 1950) 송흥석 %d birthday
+%%(diary-lunar-anniversary 9 30 nil 1950) 천정문 %d birthday
+%%(holiday-solar-term-ko)

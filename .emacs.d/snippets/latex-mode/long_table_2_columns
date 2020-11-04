@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: long table 2 columns
+# key: \longtbl2
+# --
+\begin{longtable}{p{8.5cm} | p{8.5cm}}
+  $0
+\end{longtable}

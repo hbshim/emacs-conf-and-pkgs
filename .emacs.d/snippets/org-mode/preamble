@@ -2,13 +2,12 @@
 # name: org preamble
 # key: \preamble
 # --
-#+Time-stamp: "2020-10-28 01:54:24"
 #+TITLE: $1
-#+AUTHOR: 
+#+AUTHOR: Hyungbo Shim
 #+DATE: 
-#+EMAIL: 
+#+EMAIL: hbshim@gmail.com
 #+LANGUAGE: en
-#+OPTIONS: toc:nil
+#+OPTIONS: toc:nil author:nil date:t email:nil
 #+STARTUP: latexpreview
 # C-c C-x C-l (org-latex-preview)
 

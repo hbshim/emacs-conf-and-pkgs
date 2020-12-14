@@ -1,22 +1,125 @@
-;;;; Emacs Bookmark Format Version 1 ;;;; -*- coding: utf-8-emacs -*- 
+;;;; Emacs Bookmark Format Version 1 ;;;; -*- coding: utf-8 -*-
 ;;; This format is meant to be slightly human-readable;
 ;;; nevertheless, you probably don't want to edit it.
 ;;; -*- End Of Bookmark File Format Version Stamp -*-
-(("Homebrew/Library/Taps"
+(("binomial_coefficients.tex"
+ (filename . "~/Dropbox/Workspace/Math/binomial_coefficients.tex")
+ (front-context-string . "% Time-stamp: \"2")
+ (rear-context-string)
+ (position . 1))
+("projective_spaces.tex"
+ (filename . "~/Dropbox/Workspace/Math/projective_spaces.tex")
+ (front-context-string . "\n\\section{Projec")
+ (rear-context-string . "jective spaces}\n")
+ (position . 126))
+("math/inbox.tex"
+ (filename . "~/math/inbox.tex")
+ (front-context-string . "% Time-stamp: \"2")
+ (rear-context-string)
+ (position . 1))
+("Helm-find-files: ~/Dropbox/Workspace/elisp/"
+ (filename . "/Users/hbshim/Dropbox/Workspace/elisp/")
+ (presel . "/Users/hbshim/Dropbox/Workspace/elisp/.")
+ (handler . helm-ff-bookmark-jump))
+("ispell personal dictionary"
+ (filename . "~/.ispell_english")
+ (front-context-string . "Abel\nabelian\nAde")
+ (rear-context-string)
+ (position . 1))
+("(elisp) Regular Expressions"
+ (front-context-string . "Syntax of Regexp")
+ (rear-context-string . "ps.\n\n* Menu:\n\n* ")
+ (position . 2700588)
+ (filename . "/usr/local/Cellar/emacs-mac/emacs-27.1-mac-8.1/share/info/emacs/elisp")
+ (info-node . "Regular Expressions")
+ (handler . Info-bookmark-jump))
+("(elisp) Regexp Special"
+ (front-context-string . "   ‘xxxxxxxxxxxx")
+ (rear-context-string . "st the string\n  ")
+ (position . 2704549)
+ (filename . "/usr/local/Cellar/emacs-mac/emacs-27.1-mac-8.1/share/info/emacs/elisp")
+ (info-node . "Regexp Special")
+ (handler . Info-bookmark-jump))
+("Helm-find-files: ~/Dropbox/Pregnancy/"
+ (filename . "/Users/hbshim/Dropbox/Pregnancy/")
+ (presel . "/Users/hbshim/Dropbox/Pregnancy/.")
+ (handler . helm-ff-bookmark-jump))
+("Helm-find-files: ~/Dropbox/hbshim/Documents/"
+ (filename . "/Users/hbshim/Dropbox/hbshim/Documents/")
+ (presel . "/Users/hbshim/Dropbox/hbshim/Documents/.")
+ (handler . helm-ff-bookmark-jump))
+("Helm-find-files: ~/Dropbox/Workspace/"
+ (filename . "/Users/hbshim/Dropbox/Workspace/")
+ (presel . "/Users/hbshim/Dropbox/Workspace/.")
+ (handler . helm-ff-bookmark-jump))
+("Helm-find-files: ~/.emacs.d/"
+ (filename . "/Users/hbshim/.emacs.d/")
+ (presel . "/Users/hbshim/.emacs.d/.")
+ (handler . helm-ff-bookmark-jump))
+("Helm-find-files: /usr/local/Cellar/emacs-mac/emacs-27.1-mac-8.0/share/emacs/27.1/"
+ (filename . "/usr/local/Cellar/emacs-mac/emacs-27.1-mac-8.0/share/emacs/27.1/")
+ (presel . "/usr/local/Cellar/emacs-mac/emacs-27.1-mac-8.0/share/emacs/27.1/etc")
+ (handler . helm-ff-bookmark-jump))
+("annotations"
+ (filename . "~/.emacs.d/annotations")
+ (front-context-string . "((\"/Users/hbshim")
+ (rear-context-string)
+ (position . 1))
+("math/temp.tex"
+ (filename . "~/math/temp.tex")
+ (front-context-string . "\n\n\\end{document}")
+ (rear-context-string . "egin{document}\n\n")
+ (position . 98))
+("AUCTeX style mysymb.el"
+ (filename . "~/Dropbox/Workspace/Math/style/mysymb.el")
+ (front-context-string . "(TeX-add-style-h")
+ (rear-context-string)
+ (position . 1))
+("baby.org"
+ (filename . "~/Dropbox/Pregnancy/baby.org")
+ (front-context-string)
+ (rear-context-string . "/\n      \n* Temp\n")
+ (position . 2305))
+("Homebrew Cellar"
+ (filename . "/usr/local/Cellar/")
+ (front-context-string . "pyqt\n  drwxr-xr-")
+ (rear-context-string . "6B Nov  8 16:17 ")
+ (position . 119))
+("texlive/2020/texmf-dist/tex"
+ (filename . "~/.local/texlive/2020/texmf-dist/tex/")
+ (front-context-string . "latex\n  drwxr-xr")
+ (rear-context-string . "2K Nov  9 13:21 ")
+ (position . 152))
+("texlive/2020/texmf-dist/source"
+ (filename . "~/.local/texlive/2020/texmf-dist/source/")
+ (front-context-string . "luatex\n  drwxr-x")
+ (rear-context-string . "6B Nov  8 11:54 ")
+ (position . 154))
+("texlive/2020/texmf-dist/doc"
+ (filename . "~/.local/texlive/2020/texmf-dist/doc/")
+ (front-context-string . "texlive/2020/tex")
+ (rear-context-string . "s/hbshim/.local/")
+ (position . 24))
+("math mynote.sty"
+ (filename . "~/Dropbox/Workspace/Math/mynote.sty")
+ (front-context-string . "% Time-stamp: \"2")
+ (rear-context-string)
+ (position . 1))
+("math main.tex"
+ (filename . "~/Dropbox/Workspace/Math/main.tex")
+ (front-context-string . "% Time-stamp: \"2")
+ (rear-context-string)
+ (position . 1))
+("replace-old-labels.el"
+ (filename . "~/Dropbox/Workspace/replace-old-labels.el")
+ (front-context-string . ";; This buffer i")
+ (rear-context-string)
+ (position . 1))
+("Homebrew/Library/Taps"
  (filename . "/usr/local/Homebrew/Library/Taps/")
  (front-context-string . "homebrew\n  drwxr")
  (rear-context-string . "2B Jul  9  2019 ")
  (position . 134))
-("emacs26.3_elisp_sources"
- (filename . "/usr/local/Cellar/emacs-mac/emacs-26.3-z-mac-7.7/share/emacs/26.3/lisp/")
- (front-context-string . "abbrev.el.gz\n  -")
- (rear-context-string . "2K Aug 28  2019 ")
- (position . 297))
-(".emacs.d"
- (filename . "~/.emacs.d/")
- (front-context-string . "  /Users/hbshim/")
- (rear-context-string)
- (position . 1))
 ("diary"
  (filename . "~/.emacs.d/diary")
  (front-context-string . "* Sunrise/Sunset")
@@ -62,11 +165,6 @@
  (front-context-string . "CoqArt\n  -rw-r--")
  (rear-context-string . "2B Feb  9  2020 ")
  (position . 138))
-("Documents"
- (filename . "~/Dropbox/hbshim/Documents/")
- (front-context-string . "bibtex-library\n ")
- (rear-context-string . "3K Aug 11 13:53 ")
- (position . 144))
 ("Application Support"
  (filename . "~/Library/Application Support/")
  (front-context-string . "com.apple.spotli")
@@ -124,11 +222,6 @@
  (position . 135))
 ("Math"
  (filename . "~/Dropbox/Workspace/Math/")
- (front-context-string . "  /Users/hbshim/")
- (rear-context-string)
- (position . 1))
-("Workspace"
- (filename . "~/Dropbox/Workspace/")
  (front-context-string . "  /Users/hbshim/")
  (rear-context-string)
  (position . 1))

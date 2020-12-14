@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: defn
+# key: \defn
+# --
+\begin{defn} [] `(my-LaTeX-label-interactive)`
+  $0
+\end{defn}

@@ -1,480 +1,249 @@
 ;;-*-coding: utf-8;-*-
-(define-abbrev-table 'Buffer-menu-mode-abbrev-table '())
-
-(define-abbrev-table 'Custom-mode-abbrev-table '())
-
-(define-abbrev-table 'Info-edit-mode-abbrev-table '())
-
-(define-abbrev-table 'Man-mode-abbrev-table '())
-
-(define-abbrev-table 'TeX-error-overview-mode-abbrev-table '())
-
-(define-abbrev-table 'TeX-output-mode-abbrev-table '())
-
-(define-abbrev-table 'TeX-special-mode-abbrev-table '())
-
-(define-abbrev-table 'apropos-mode-abbrev-table '())
-
-(define-abbrev-table 'awk-mode-abbrev-table
-  '(
-   ))
-
-(define-abbrev-table 'bib-mode-abbrev-table '())
-
-(define-abbrev-table 'biblio-selection-mode-abbrev-table '())
-
-(define-abbrev-table 'bibtex-mode-abbrev-table '())
-
-(define-abbrev-table 'bibtex-style-mode-abbrev-table '())
-
-(define-abbrev-table 'bookmark-bmenu-mode-abbrev-table '())
-
-(define-abbrev-table 'bookmark-edit-annotation-mode-abbrev-table '())
-
-(define-abbrev-table 'c++-mode-abbrev-table
-  '(
-   ))
-
-(define-abbrev-table 'c-mode-abbrev-table
-  '(
-   ))
-
-(define-abbrev-table 'calendar-mode-abbrev-table '())
-
-(define-abbrev-table 'comint-mode-abbrev-table '())
-
-(define-abbrev-table 'completion-list-mode-abbrev-table '())
-
-(define-abbrev-table 'coq-goals-mode-abbrev-table '())
-
-(define-abbrev-table 'coq-mode-abbrev-table
-  '(
-   ))
-
-(define-abbrev-table 'coq-response-mode-abbrev-table '())
-
-(define-abbrev-table 'coq-shell-mode-abbrev-table '())
-
-(define-abbrev-table 'css-mode-abbrev-table '())
-
-(define-abbrev-table 'custom-new-theme-mode-abbrev-table '())
-
-(define-abbrev-table 'custom-theme-choose-mode-abbrev-table '())
-
-(define-abbrev-table 'debugger-mode-abbrev-table '())
-
-(define-abbrev-table 'diff-mode-abbrev-table '())
-
-(define-abbrev-table 'doctex-mode-abbrev-table '())
-
-(define-abbrev-table 'edebug-eval-mode-abbrev-table '())
-
-(define-abbrev-table 'edit-abbrevs-mode-abbrev-table '())
-
-(define-abbrev-table 'eieio-custom-mode-abbrev-table '())
-
-(define-abbrev-table 'elisp-byte-code-mode-abbrev-table '())
-
-(define-abbrev-table 'emacs-lisp-mode-abbrev-table '())
-
-(define-abbrev-table 'epa-info-mode-abbrev-table '())
-
-(define-abbrev-table 'epa-key-list-mode-abbrev-table '())
-
-(define-abbrev-table 'epa-key-mode-abbrev-table '())
-
-(define-abbrev-table 'flymake-diagnostics-buffer-mode-abbrev-table '())
-
-(define-abbrev-table 'fundamental-mode-abbrev-table '())
-
-(define-abbrev-table 'global-abbrev-table '())
-
-(define-abbrev-table 'gnus-group-mode-abbrev-table '())
-
-(define-abbrev-table 'grep-mode-abbrev-table '())
-
-(define-abbrev-table 'helm-grep-mode-abbrev-table '())
-
-(define-abbrev-table 'helm-major-mode-abbrev-table '())
-
-(define-abbrev-table 'helm-occur-mode-abbrev-table '())
-
-(define-abbrev-table 'help-mode-abbrev-table '())
-
-(define-abbrev-table 'html-mode-abbrev-table '())
-
-(define-abbrev-table 'ibuffer-mode-abbrev-table '())
-
-(define-abbrev-table 'idl-mode-abbrev-table '())
-
-(define-abbrev-table 'image-dired-display-image-mode-abbrev-table '())
-
-(define-abbrev-table 'image-dired-thumbnail-mode-abbrev-table '())
-
-(define-abbrev-table 'inferior-python-mode-abbrev-table '())
-
-(define-abbrev-table 'java-mode-abbrev-table
-  '(
-   ))
-
-(define-abbrev-table 'js-jsx-mode-abbrev-table '())
-
-(define-abbrev-table 'js-mode-abbrev-table '())
-
 (define-abbrev-table 'latex-mode-abbrev-table
   '(
-    ("1diml" "one dimensional" nil 3)
-    ("GAmma" "Gamma" nil 8)
-    ("Gam" "Gamma" nil 27)
-    ("Holder" "H\\\"{o}lder" nil 3)
-    ("IBN" "invariant basis number" nil 9)
-    ("LEt" "Let" nil 8)
-    ("Lra" "Leftrightarrow" nil 265)
-    ("Prufer" "Pr\\\"{u}fer" nil 7)
-    ("Ra" "Rightarrow" nil 453)
-    ("TFAE" "the followings are equivalent" nil 15)
-    ("Tfae" "The followings are equivalent" nil 10)
-    ("abel" "Abel" nil 11)
-    ("acc" "ascending chain condition" nil 4)
-    ("adams" "Adams" nil 9)
-    ("additivty" "additivity" nil 1)
-    ("ajugate" "adjugate" nil 1)
-    ("alhpa" "alpha" nil 4)
-    ("ambigously" "ambiguously" nil 1)
-    ("artinial" "Artinian" nil 0)
-    ("artinian" "Artinian" nil 51)
-    ("assiging" "assigning" nil 1)
-    ("assocated" "associated" nil 1)
-    ("banach" "Banach" nil 1)
-    ("bernoulli" "Bernoulli" nil 5)
-    ("bezout" "B\\'{e}zout" nil 42)
-    ("bioplus" "bigoplus" nil 1)
-    ("blude" "blue" nil 1)
-    ("blue" "blue" nil 8)
-    ("boolean" "Boolean" nil 41)
-    ("borel" "Borel" nil 18)
-    ("bottm" "bottom" nil 1)
-    ("cartesian" "Cartesian" nil 12)
-    ("cartier" "Cartier" nil 1)
-    ("cauchy" "Cauchy" nil 6)
-    ("characteritic" "characteristic" nil 1)
-    ("chern" "Chern" nil 11)
-    ("coequalizaer" "coequalizer" nil 1)
-    ("comlex" "complex" nil 1)
-    ("comm" "commutative" nil 6)
-    ("compactible" "compatible" nil 1)
-    ("complte" "complete" nil 1)
-    ("compltely" "completely" nil 1)
-    ("compnent" "component" nil 2)
-    ("compoent" "component" nil 0)
-    ("compuation" "computation" nil 1)
-    ("condtaing" "containing" nil 1)
-    ("constains" "contains" nil 1)
-    ("construcible" "constructible" nil 2)
-    ("continous" "continuous" nil 2)
-    ("continuos" "continuous" nil 1)
-    ("copmlex" "complex" nil 1)
-    ("covolution" "convolution" nil 1)
-    ("dcc" "descending chain condition" nil 2)
-    ("dedekind" "Dedekind" nil 33)
-    ("del" "Delta" nil 7)
-    ("desmidefinite" "semidefinite" nil 1)
-    ("deteremined" "determined" nil 2)
-    ("deteremines" "determines" nil 1)
-    ("diagral" "diagonal" nil 1)
-    ("dirac" "Dirac" nil 2)
-    ("dvr" "discrete valuation ring" nil 32)
-    ("dvrs" "discrete valuation rings" nil 12)
-    ("eilenberg" "Eilenberg" nil 5)
-    ("embeeding" "embedding" nil 1)
-    ("equialvant" "equivalent" nil 1)
-    ("es" "exact sequence" nil 0)
-    ("etale" "\\'etale" nil 6)
-    ("euclidean" "Euclidean" nil 8)
-    ("euler" "Euler" nil 16)
-    ("euler's" "Euler's" nil 3)
-    ("excat" "exact" nil 1)
-    ("explision" "explosion" nil 1)
-    ("exsits" "exists" nil 2)
-    ("falase" "false" nil 1)
-    ("fejer" "F\\'ejer" nil 1)
-    ("fermat" "Fermat" nil 0)
-    ("fermat's" "Fermat's" nil 1)
-    ("fgl" "formal group law" nil 5)
-    ("fgls" "formal group laws" nil 2)
-    ("fourier" "Fourier" nil 41)
-    ("frechet" "Fr\\'echet" nil 3)
-    ("ftoc" "Fundamental Theorem of Calculus" nil 10)
-    ("fubini" "Fubini" nil 0)
-    ("galois" "Galois" nil 1)
-    ("gauss" "Gauss" nil 13)
-    ("gcd" "GCD" nil 11)
-    ("generatros" "generators" nil 1)
-    ("grassmannian" "Grassmannian" nil 3)
-    ("grothendieck" "Grothendieck" nil 23)
-    ("gysin" "Gysin" nil 3)
-    ("haar" "Haar" nil 1)
-    ("hausdorff" "Hausdorff" nil 13)
-    ("heine" "Heine" nil 0)
-    ("hermitian" "Hermitian" nil 15)
-    ("hilbert" "Hilbert" nil 8)
-    ("holomoprhic" "holomorphic" nil 1)
-    ("homogenous" "homogeneous" nil 6)
-    ("hookra" "hookrightarrow" nil 8)
-    ("hopf" "Hopf" nil 14)
-    ("htat" "that" nil 2)
-    ("identies" "identities" nil 1)
-    ("iff" "if and only if" nil 95)
-    ("incompariable" "incomparable" nil 2)
-    ("inquality" "inequality" nil 2)
-    ("irrducible" "irreducible" nil 1)
-    ("irreduible" "irreducible" nil 0)
-    ("irreudible" "irreducible" nil 1)
-    ("isomorhpism" "isomorphism" nil 1)
-    ("istb" "is said to be" nil 86)
-    ("jacobson" "Jacobson" nil 13)
-    ("kronecker" "Kronecker" nil 1)
-    ("krull" "Krull" nil 24)
-    ("kunneth" "K\\\"{u}nneth" nil 3)
-    ("la" "leftarrow" nil 31)
-    ("laplacian" "Laplacian" nil 0)
-    ("lcm" "LCM" nil 1)
-    ("lcoal" "local" nil 2)
-    ("lcoally" "locally" nil 1)
-    ("lebesgue" "Lebesgue" nil 9)
-    ("leffler" "Leffler" nil 1)
-    ("leibnitz" "Leibnitz" nil 4)
-    ("loal" "local" nil 0)
-    ("lorentz" "Lorentz" nil 1)
-    ("lra" "leftrightarrow" nil 46)
-    ("maclane" "MacLane" nil 3)
-    ("maclaurin" "Maclaurin" nil 6)
-    ("measurablity" "measurability" nil 1)
-    ("metrices" "matrices" nil 1)
-    ("milnor" "Milnor" nil 0)
-    ("mittag" "Mittag" nil 1)
-    ("mnfld" "manifold" nil 3)
-    ("mnflds" "manifolds" nil 4)
-    ("moore" "Moore" nil 2)
-    ("morhpism" "morphism" nil 1)
-    ("multipliation" "multiplication" nil 1)
-    ("nagata" "Nagata" nil 2)
-    ("neotherian" "Noetherian" nil 0)
-    ("nessessarily" "necessarily" nil 1)
-    ("neumann" "Neumann" nil 9)
-    ("nilpoent" "nilpotent" nil 1)
-    ("nilponent" "nilpotent" nil 1)
-    ("noetheian" "Noetherian" nil 1)
-    ("noetheiran" "Noetherian" nil 1)
-    ("noetherian" "Noetherian" nil 245)
-    ("notehrian" "Noetherian" nil 1)
-    ("notheiran" "Noetherian" nil 1)
-    ("notherian" "Noetherian" nil 6)
-    ("numbder" "number" nil 2)
-    ("ol" "overline" nil 6)
-    ("opeations" "operations" nil 1)
-    ("oriention" "orientation" nil 1)
-    ("orthoronal" "orthonormal" nil 1)
-    ("otehr" "other" nil 0)
-    ("oti" "otimes" nil 12)
-    ("ovset" "overset" nil 24)
-    ("perioic" "periodic" nil 3)
-    ("perioid" "period" nil 1)
-    ("permuation" "permutation" nil 1)
-    ("permuations" "permutations" nil 1)
-    ("peroid" "period" nil 2)
-    ("picard" "Picard" nil 7)
-    ("pid" "principal ideal domain" nil 14)
-    ("poincare" "Poincar\\'{e}" nil 6)
-    ("poisson" "Poisson" nil 2)
-    ("polyonmial" "polynomial" nil 1)
-    ("pontrjagin" "Pontrjagin" nil 5)
-    ("poset" "partially ordered set" nil 7)
-    ("practially" "practically" nil 1)
-    ("propsition" "proposition" nil 1)
-    ("prufer" "Pr\\\"{u}fer" nil 8)
-    ("ra" "rightarrow" nil 2134)
-    ("radon" "Radon" nil 4)
-    ("resp" "respectively" nil 17)
-    ("respecitvely" "respectively" nil 1)
-    ("riemann" "Riemann" nil 1)
-    ("riesz" "Riesz" nil 1)
-    ("rref" "reduced row echelon form" nil 0)
-    ("satuarated" "saturated" nil 1)
-    ("schreier" "Schreier" nil 9)
-    ("segre" "Segre" nil 2)
-    ("separted" "separated" nil 0)
-    ("ses" "short exact sequence" nil 5)
-    ("simpliest" "simplest" nil 1)
-    ("sqeuence" "sequence" nil 1)
-    ("st" "such that" nil 231)
-    ("steenrod" "Steenrod" nil 7)
-    ("stiefel" "Stiefel" nil 19)
-    ("stronlgy" "strongly" nil 1)
-    ("subest" "subset" nil 1)
-    ("surjectiviey" "surjectivity" nil 1)
-    ("susbet" "subset" nil 1)
-    ("taylor" "Taylor" nil 7)
-    ("thom" "Thom" nil 2)
-    ("toeplitz" "Toeplitz" nil 1)
-    ("topologcial" "topological" nil 0)
-    ("trileft" "triangleleft" nil 1)
-    ("ufd" "unique factorization domain" nil 34)
-    ("unductively" "inductively" nil 1)
-    ("uniqely" "uniquely" nil 2)
-    ("vaprhi" "varphi" nil 1)
-    ("varep" "varepsilon" nil 247)
-    ("wdhat" "widehat" nil 98)
-    ("wdtilde" "widetilde" nil 82)
-    ("weierstrass" "Weierstrass" nil 1)
-    ("weil" "Weil" nil 2)
-    ("whitney" "Whitney" nil 21)
-    ("wlog" "without loss of generality" nil 0)
-    ("wrt" "with respect to" nil 33)
-    ("zariski" "Zariski" nil 13)
+    ("1diml" "one dimensional" nil :count 3)
+    ("GAmma" "Gamma" nil :count 8)
+    ("Gam" "Gamma" nil :count 27)
+    ("Holder" "H\\\"{o}lder" nil :count 3)
+    ("IBN" "invariant basis number" nil :count 9)
+    ("LEt" "Let" nil :count 8)
+    ("Lra" "Leftrightarrow" nil :count 265)
+    ("Prufer" "Pr\\\"{u}fer" nil :count 7)
+    ("Ra" "Rightarrow" nil :count 453)
+    ("TFAE" "the followings are equivalent" nil :count 15)
+    ("Tfae" "The followings are equivalent" nil :count 10)
+    ("abel" "Abel" nil :count 11)
+    ("acc" "ascending chain condition" nil :count 4)
+    ("adams" "Adams" nil :count 9)
+    ("additivty" "additivity" nil :count 1)
+    ("ajugate" "adjugate" nil :count 1)
+    ("alhpa" "alpha" nil :count 4)
+    ("ambigously" "ambiguously" nil :count 1)
+    ("arguement" "argument" nil :count 1)
+    ("arguemt" "argument" nil :count 1)
+    ("arguemtn" "argument" nil :count 1)
+    ("artinial" "Artinian" nil :count 0)
+    ("artinian" "Artinian" nil :count 51)
+    ("assiging" "assigning" nil :count 1)
+    ("assocated" "associated" nil :count 1)
+    ("asumption" "assumption" nil :count 1)
+    ("banach" "Banach" nil :count 1)
+    ("bernoulli" "Bernoulli" nil :count 5)
+    ("bezout" "B\\'{e}zout" nil :count 42)
+    ("bioplus" "bigoplus" nil :count 1)
+    ("blude" "blue" nil :count 1)
+    ("blue" "blue" nil :count 8)
+    ("boolean" "Boolean" nil :count 41)
+    ("borel" "Borel" nil :count 18)
+    ("bottm" "bottom" nil :count 1)
+    ("cartesian" "Cartesian" nil :count 14)
+    ("cartier" "Cartier" nil :count 1)
+    ("cauchy" "Cauchy" nil :count 6)
+    ("characteritic" "characteristic" nil :count 1)
+    ("chern" "Chern" nil :count 11)
+    ("coequalizaer" "coequalizer" nil :count 1)
+    ("colum" "column" nil :count 1)
+    ("comlex" "complex" nil :count 1)
+    ("comm" "commutative" nil :count 6)
+    ("compactible" "compatible" nil :count 1)
+    ("complte" "complete" nil :count 1)
+    ("compltely" "completely" nil :count 1)
+    ("compnent" "component" nil :count 2)
+    ("compoent" "component" nil :count 0)
+    ("compuation" "computation" nil :count 1)
+    ("condtaing" "containing" nil :count 1)
+    ("consits" "consists" nil :count 1)
+    ("constains" "contains" nil :count 1)
+    ("construcible" "constructible" nil :count 2)
+    ("continous" "continuous" nil :count 2)
+    ("continuos" "continuous" nil :count 1)
+    ("copmlex" "complex" nil :count 1)
+    ("covolution" "convolution" nil :count 1)
+    ("dcc" "descending chain condition" nil :count 2)
+    ("dedekind" "Dedekind" nil :count 33)
+    ("del" "Delta" nil :count 7)
+    ("descrption" "description" nil :count 1)
+    ("desmidefinite" "semidefinite" nil :count 1)
+    ("deteremined" "determined" nil :count 2)
+    ("deteremines" "determines" nil :count 1)
+    ("diagral" "diagonal" nil :count 1)
+    ("diffemorphic" "diffeomorphic" nil :count 1)
+    ("dirac" "Dirac" nil :count 2)
+    ("dvr" "discrete valuation ring" nil :count 32)
+    ("dvrs" "discrete valuation rings" nil :count 12)
+    ("eilenberg" "Eilenberg" nil :count 5)
+    ("embeeding" "embedding" nil :count 1)
+    ("enviroments" "environments" nil :count 1)
+    ("equialvant" "equivalent" nil :count 1)
+    ("es" "exact sequence" nil :count 0)
+    ("etale" "\\'etale" nil :count 6)
+    ("euclidean" "Euclidean" nil :count 8)
+    ("euler" "Euler" nil :count 16)
+    ("euler's" "Euler's" nil :count 3)
+    ("excat" "exact" nil :count 1)
+    ("explision" "explosion" nil :count 1)
+    ("exsits" "exists" nil :count 2)
+    ("falase" "false" nil :count 1)
+    ("fejer" "F\\'ejer" nil :count 1)
+    ("fermat" "Fermat" nil :count 0)
+    ("fermat's" "Fermat's" nil :count 1)
+    ("fgl" "formal group law" nil :count 5)
+    ("fgls" "formal group laws" nil :count 2)
+    ("finily" "finitely" nil :count 1)
+    ("fourier" "Fourier" nil :count 41)
+    ("frechet" "Fr\\'echet" nil :count 3)
+    ("ftoc" "Fundamental Theorem of Calculus" nil :count 10)
+    ("fubini" "Fubini" nil :count 0)
+    ("funcion" "function" nil :count 1)
+    ("galois" "Galois" nil :count 1)
+    ("gauss" "Gauss" nil :count 13)
+    ("gcd" "GCD" nil :count 11)
+    ("generatros" "generators" nil :count 1)
+    ("grassmannian" "Grassmannian" nil :count 4)
+    ("greather" "greater" nil :count 1)
+    ("grothendieck" "Grothendieck" nil :count 23)
+    ("gysin" "Gysin" nil :count 3)
+    ("haar" "Haar" nil :count 1)
+    ("hausdorff" "Hausdorff" nil :count 13)
+    ("heine" "Heine" nil :count 0)
+    ("heomeomorphism" "homeomorphism" nil :count 1)
+    ("hermitian" "Hermitian" nil :count 15)
+    ("hilbert" "Hilbert" nil :count 8)
+    ("holomoprhic" "holomorphic" nil :count 1)
+    ("homogenous" "homogeneous" nil :count 6)
+    ("hookra" "hookrightarrow" nil :count 8)
+    ("hopf" "Hopf" nil :count 14)
+    ("horitonal" "horizontal" nil :count 1)
+    ("htat" "that" nil :count 2)
+    ("identies" "identities" nil :count 1)
+    ("iff" "if and only if" nil :count 99)
+    ("incompariable" "incomparable" nil :count 2)
+    ("inquality" "inequality" nil :count 2)
+    ("irrducible" "irreducible" nil :count 1)
+    ("irreduible" "irreducible" nil :count 0)
+    ("irreudible" "irreducible" nil :count 1)
+    ("isomorhpism" "isomorphism" nil :count 1)
+    ("istb" "is said to be" nil :count 87)
+    ("jacobson" "Jacobson" nil :count 13)
+    ("knowlege" "knowledge" nil :count 1)
+    ("kronecker" "Kronecker" nil :count 1)
+    ("krull" "Krull" nil :count 24)
+    ("kunneth" "K\\\"{u}nneth" nil :count 3)
+    ("la" "leftarrow" nil :count 31)
+    ("laplacian" "Laplacian" nil :count 0)
+    ("lcm" "LCM" nil :count 1)
+    ("lcoal" "local" nil :count 2)
+    ("lcoally" "locally" nil :count 1)
+    ("lebesgue" "Lebesgue" nil :count 9)
+    ("leffler" "Leffler" nil :count 1)
+    ("leibnitz" "Leibnitz" nil :count 4)
+    ("loal" "local" nil :count 0)
+    ("lorentz" "Lorentz" nil :count 1)
+    ("lra" "leftrightarrow" nil :count 46)
+    ("maclane" "MacLane" nil :count 3)
+    ("maclaurin" "Maclaurin" nil :count 6)
+    ("measurablity" "measurability" nil :count 1)
+    ("metrices" "matrices" nil :count 1)
+    ("milnor" "Milnor" nil :count 0)
+    ("mittag" "Mittag" nil :count 1)
+    ("mnfld" "manifold" nil :count 3)
+    ("mnflds" "manifolds" nil :count 4)
+    ("moore" "Moore" nil :count 2)
+    ("morhpism" "morphism" nil :count 1)
+    ("multipliation" "multiplication" nil :count 1)
+    ("nagata" "Nagata" nil :count 2)
+    ("neotherian" "Noetherian" nil :count 0)
+    ("nessessarily" "necessarily" nil :count 1)
+    ("neumann" "Neumann" nil :count 9)
+    ("nilpoent" "nilpotent" nil :count 1)
+    ("nilponent" "nilpotent" nil :count 1)
+    ("noetheian" "Noetherian" nil :count 1)
+    ("noetheiran" "Noetherian" nil :count 1)
+    ("noetherian" "Noetherian" nil :count 245)
+    ("notehrian" "Noetherian" nil :count 1)
+    ("notheiran" "Noetherian" nil :count 1)
+    ("notherian" "Noetherian" nil :count 6)
+    ("numbder" "number" nil :count 2)
+    ("obatin" "obtain" nil :count 1)
+    ("ol" "overline" nil :count 6)
+    ("opeations" "operations" nil :count 1)
+    ("oriention" "orientation" nil :count 1)
+    ("orthoronal" "orthonormal" nil :count 1)
+    ("otehr" "other" nil :count 0)
+    ("oti" "otimes" nil :count 12)
+    ("ovset" "overset" nil :count 24)
+    ("perioic" "periodic" nil :count 3)
+    ("perioid" "period" nil :count 1)
+    ("permuation" "permutation" nil :count 1)
+    ("permuations" "permutations" nil :count 1)
+    ("peroid" "period" nil :count 2)
+    ("picard" "Picard" nil :count 7)
+    ("pid" "principal ideal domain" nil :count 14)
+    ("poincare" "Poincar\\'{e}" nil :count 6)
+    ("poisson" "Poisson" nil :count 2)
+    ("polyonmial" "polynomial" nil :count 1)
+    ("pontrjagin" "Pontrjagin" nil :count 5)
+    ("poset" "partially ordered set" nil :count 7)
+    ("practially" "practically" nil :count 1)
+    ("prerequite" "prerequisite" nil :count 1)
+    ("propsition" "proposition" nil :count 1)
+    ("prufer" "Pr\\\"{u}fer" nil :count 8)
+    ("ra" "rightarrow" nil :count 2142)
+    ("radon" "Radon" nil :count 4)
+    ("refered" "referred" nil :count 1)
+    ("resp" "respectively" nil :count 20)
+    ("respecitvely" "respectively" nil :count 1)
+    ("riemann" "Riemann" nil :count 1)
+    ("riesz" "Riesz" nil :count 1)
+    ("rref" "reduced row echelon form" nil :count 0)
+    ("satuarated" "saturated" nil :count 1)
+    ("schreier" "Schreier" nil :count 9)
+    ("segre" "Segre" nil :count 2)
+    ("separted" "separated" nil :count 0)
+    ("ses" "short exact sequence" nil :count 5)
+    ("simpliest" "simplest" nil :count 1)
+    ("sqeuence" "sequence" nil :count 1)
+    ("st" "such that" nil :count 239)
+    ("steenrod" "Steenrod" nil :count 7)
+    ("steifel" "Stiefe" nil :count 1)
+    ("stiefel" "Stiefel" nil :count 22)
+    ("stollers" "strollers" nil :count 1)
+    ("striling" "Stirling" nil :count 1)
+    ("stronlgy" "strongly" nil :count 1)
+    ("subest" "subset" nil :count 1)
+    ("supressing" "suppressing" nil :count 2)
+    ("surjectiviey" "surjectivity" nil :count 1)
+    ("susbet" "subset" nil :count 1)
+    ("taylor" "Taylor" nil :count 7)
+    ("thom" "Thom" nil :count 2)
+    ("toeplitz" "Toeplitz" nil :count 1)
+    ("topologcial" "topological" nil :count 0)
+    ("trileft" "triangleleft" nil :count 1)
+    ("ufd" "unique factorization domain" nil :count 34)
+    ("unductively" "inductively" nil :count 1)
+    ("uniqely" "uniquely" nil :count 2)
+    ("vaprhi" "varphi" nil :count 1)
+    ("varep" "varepsilon" nil :count 247)
+    ("wdhat" "widehat" nil :count 98)
+    ("wdtilde" "widetilde" nil :count 82)
+    ("weierstrass" "Weierstrass" nil :count 1)
+    ("weil" "Weil" nil :count 2)
+    ("whitney" "Whitney" nil :count 21)
+    ("whtehr" "whether" nil :count 1)
+    ("whther" "whether" nil :count 1)
+    ("wihle" "while" nil :count 1)
+    ("wlog" "without loss of generality" nil :count 0)
+    ("wrt" "with respect to" nil :count 33)
+    ("zariski" "Zariski" nil :count 13)
    ))
 
-(define-abbrev-table 'lisp-mode-abbrev-table '())
-
-(define-abbrev-table 'makefile-automake-mode-abbrev-table '())
-
-(define-abbrev-table 'makefile-bsdmake-mode-abbrev-table '())
-
-(define-abbrev-table 'makefile-gmake-mode-abbrev-table '())
-
-(define-abbrev-table 'makefile-imake-mode-abbrev-table '())
-
-(define-abbrev-table 'makefile-makepp-mode-abbrev-table '())
-
-(define-abbrev-table 'makefile-mode-abbrev-table '())
-
-(define-abbrev-table 'mercury-mode-abbrev-table '())
-
-(define-abbrev-table 'message-mode-abbrev-table '())
-
-(define-abbrev-table 'messages-buffer-mode-abbrev-table '())
-
-(define-abbrev-table 'mhtml-mode-abbrev-table '())
-
-(define-abbrev-table 'nroff-mode-abbrev-table '())
-
-(define-abbrev-table 'objc-mode-abbrev-table
+(define-abbrev-table 'plain-tex-mode-abbrev-table
   '(
+    ("hfule" "hrule" nil :count 1)
    ))
 
-(define-abbrev-table 'occur-edit-mode-abbrev-table '())
-
-(define-abbrev-table 'occur-mode-abbrev-table '())
-
-(define-abbrev-table 'org-export-stack-mode-abbrev-table '())
-
-(define-abbrev-table 'org-mode-abbrev-table '())
-
-(define-abbrev-table 'outline-mode-abbrev-table '())
-
-(define-abbrev-table 'package-menu-mode-abbrev-table '())
-
-(define-abbrev-table 'pike-mode-abbrev-table
+(define-abbrev-table 'term-mode-abbrev-table
   '(
+    ("ecdo" "echo" nil :count 1)
    ))
-
-(define-abbrev-table 'plain-tex-mode-abbrev-table '())
-
-(define-abbrev-table 'process-menu-mode-abbrev-table '())
-
-(define-abbrev-table 'profiler-report-mode-abbrev-table '())
-
-(define-abbrev-table 'prog-mode-abbrev-table '())
-
-(define-abbrev-table 'prolog-inferior-mode-abbrev-table '())
-
-(define-abbrev-table 'prolog-mode-abbrev-table '())
-
-(define-abbrev-table 'proof-goals-mode-abbrev-table '())
-
-(define-abbrev-table 'proof-mode-abbrev-table '())
-
-(define-abbrev-table 'proof-response-mode-abbrev-table '())
-
-(define-abbrev-table 'proof-shell-mode-abbrev-table '())
-
-(define-abbrev-table 'proof-splash-mode-abbrev-table '())
-
-(define-abbrev-table 'proof-universal-keys-only-mode-abbrev-table '())
-
-(define-abbrev-table 'python-mode-abbrev-table '())
-
-(define-abbrev-table 'python-mode-skeleton-abbrev-table
-  '(
-   ))
-
-(define-abbrev-table 'quickurl-list-mode-abbrev-table '())
-
-(define-abbrev-table 'reftex-index-mode-abbrev-table '())
-
-(define-abbrev-table 'reftex-index-phrases-mode-abbrev-table '())
-
-(define-abbrev-table 'reftex-select-bib-mode-abbrev-table '())
-
-(define-abbrev-table 'reftex-select-label-mode-abbrev-table '())
-
-(define-abbrev-table 'rst-mode-abbrev-table
-  '(
-   ))
-
-(define-abbrev-table 'rst-toc-mode-abbrev-table '())
-
-(define-abbrev-table 'scomint-mode-abbrev-table '())
-
-(define-abbrev-table 'scss-mode-abbrev-table '())
-
-(define-abbrev-table 'select-tags-table-mode-abbrev-table '())
-
-(define-abbrev-table 'sgml-mode-abbrev-table '())
-
-(define-abbrev-table 'sh-mode-abbrev-table '())
-
-(define-abbrev-table 'shell-mode-abbrev-table '())
-
-(define-abbrev-table 'slitex-mode-abbrev-table '())
-
-(define-abbrev-table 'snippet-mode-abbrev-table '())
-
-(define-abbrev-table 'special-mode-abbrev-table '())
-
-(define-abbrev-table 'speedbar-mode-abbrev-table '())
-
-(define-abbrev-table 'srecode-template-mode-abbrev-table '())
-
-(define-abbrev-table 'tabulated-list-mode-abbrev-table '())
-
-(define-abbrev-table 'tar-mode-abbrev-table '())
-
-(define-abbrev-table 'term-mode-abbrev-table '())
-
-(define-abbrev-table 'tex-mode-abbrev-table '())
-
-(define-abbrev-table 'tex-shell-abbrev-table '())
-
-(define-abbrev-table 'texinfo-mode-abbrev-table '())
-
-(define-abbrev-table 'text-mode-abbrev-table '())
-
-(define-abbrev-table 'url-cookie-mode-abbrev-table '())
-
-(define-abbrev-table 'vc-bzr-log-view-mode-abbrev-table '())
-
-(define-abbrev-table 'vc-git-log-edit-mode-abbrev-table '())
-
-(define-abbrev-table 'vc-git-log-view-mode-abbrev-table '())
-
-(define-abbrev-table 'vc-git-region-history-mode-abbrev-table '())
-
-(define-abbrev-table 'vc-hg-log-view-mode-abbrev-table '())
-
-(define-abbrev-table 'vc-mtn-log-view-mode-abbrev-table '())
-
-(define-abbrev-table 'vc-svn-log-view-mode-abbrev-table '())
-
-(define-abbrev-table 'xref--xref-buffer-mode-abbrev-table '())
 

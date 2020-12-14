@@ -1,0 +1,11 @@
+# -*- mode: snippet -*-
+# name: package_config
+# key: \package
+# --
+(when (package-installed-p '$0)
+  (with-eval-after-load '$0
+    (setq )
+    (add-to-list )
+    (global-set-key (kbd " ") 'command)
+    (define-key ...-map "C-c" 'command)
+    (require ')))

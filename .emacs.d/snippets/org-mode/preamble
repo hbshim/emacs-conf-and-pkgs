@@ -10,5 +10,6 @@
 #+OPTIONS: toc:nil author:nil date:t email:nil
 #+STARTUP: latexpreview
 # C-c C-x C-l (org-latex-preview)
+# See <[[info:org#In-buffer Settings][info:org#In-buffer Settings]]> for the Summary of In-Buffer Settings
 
 $0

@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: longtable2col
+# key: \longtable2col
+# --
+{ p{.5\textwidth} | p{.5\textwidth} }

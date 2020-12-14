@@ -26,6 +26,8 @@ antisymmetricity
 arity
 Artin
 Artinian
+autoload
+autoloading
 automorphism
 automorphisms
 Banach
@@ -122,6 +124,8 @@ decomposables
 Dedekind
 def
 definedness
+diffeomorphic
+diffeomorphism
 dinatural
 Dirichlet
 divisibility
@@ -195,6 +199,7 @@ injectivity
 integrability
 integrablility
 integrality
+internet
 intuitionistic
 invertibility
 invertiblility
@@ -232,6 +237,7 @@ majorizing
 Marcinkiewicz
 measurability
 meromorphic
+metafont
 metrizable
 metrized
 microbundle
@@ -290,6 +296,7 @@ pointwisely
 Pontrjagin
 poset
 positivity
+precalculus
 preimage
 preorder
 presheaf
@@ -396,6 +403,7 @@ thm
 Thom
 TODO
 Toeplitz
+topologization
 topologize
 topologized
 topologizes
@@ -421,6 +429,7 @@ uple
 Valuative
 Vietoris
 von
+washable
 Wedderburn's
 Weierstrass
 Weil

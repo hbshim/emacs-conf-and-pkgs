@@ -1,0 +1,11 @@
+# -*- mode: snippet -*-
+# name: subfiles
+# key: \subfiles
+# --
+\documentclass[${1:main_file_name}]{subfiles}
+
+\begin{document}
+
+$0
+
+\end{document}

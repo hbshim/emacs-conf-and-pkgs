@@ -1,0 +1,25 @@
+# -*- mode: snippet -*-
+# name: latex_snippet_preamble
+# key: \LaTeXSnippetPreamble
+# --
+% Time-stamp: "2020-11-23 21:51:44 hbshim"
+\documentclass[../main.tex]{subfiles}
+
+\begin{document}
+
+$0
+
+\SubfilesInclusionEnds
+
+\begin{verbatim}
+#keywords  ("`(file-name-sans-extension (buffer-name))`" ())
+#semantics ("`(file-name-sans-extension (buffer-name))`")
+#modified  ("`(file-name-sans-extension (buffer-name))`" ())
+\end{verbatim}
+\end{document}
+
+%%% Local Variables:
+%%% coding: utf-8
+%%% mode: latex
+%%% TeX-master: t
+%%% End:

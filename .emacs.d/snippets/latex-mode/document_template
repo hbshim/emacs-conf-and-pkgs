@@ -1,0 +1,18 @@
+# -*- mode: snippet -*-
+# name: document_template
+# key: \template
+# --
+% -*- coding: utf-8 -*-
+% Time-stamp: "2020-11-11 11:08:04 hbshim"
+\documentclass[main.tex]{subfiles}
+
+\usepackage{mynote}
+
+\begin{document}
+$0
+\end{document}
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: t
+%%% End:
